@@ -7,12 +7,10 @@
     <title>ыыы</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.cdnfonts.com/css/tex-gyre-schola" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/tt-travels-next-trl" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100..900&display=swap" rel="stylesheet">
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/bootstrap/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/10bf1f9c8a.js" crossorigin="anonymous"></script>
@@ -24,297 +22,361 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top mainNavbar">
+    <nav class="navbar sticky-top" style="background-color: #252525;">
         <div class="container-fluid">
-            <button class="toggle-menu">
-                <span class="navBurg"></span>
-            </button>
-            <a class="navbar-brand img-fluid navLogo" href="#"><img src="img/logo-2.png" height="45px"></a>
-        </div>
-        <div id="menu" style="position: fixed;">
-            <p class="menuLogo">Меню</p>
-            <nav class="main-nav">
-                <ul class="mainNavUl">
-                    <li class="mainNavLi title">
-                        <a href="#" class="mainNavLink">
-                            Главная
-                        </a>
-                    </li>
-                    <li class="mainNavLi title">
-                        <a href="#" class="mainNavLink">
-                            Каталог
-                        </a>
-                    </li>
-                    <li class="mainNavLi title">
-                        <a href="#" class="mainNavLink">
-                            Информация о товаре
-                        </a>
-                    </li>
-                    <li class="mainNavLi title">
-                        <a href="#" class="mainNavLink">
-                            Политика конфиденциальности
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="d-flex" style="flex-direction: row; align-items: center;flex-wrap: nowrap; width: 80%">
+                <a class="navbar-brand" href="#" style="color: #fff;"><img src="img/logo.png" width="42px" height="42px"></a>
+                <a style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 14px; font-weight: 500; color:#fff; margin-left: 1%" class="nav-link nLink" href="#">Каталог</a>
+                <a style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 14px; font-weight: 500; color:#fff; margin-left: 2%" class="nav-link nLink" href="#">Производство</a>
+                <a style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 14px; font-weight: 500; color:#fff; margin-left: 2%" class="nav-link nLink" href="#">О смазках</a>
+            </div>
+            <div>
+                <a style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 14px; font-weight: 500; color:#fff;" class="nav-link nLink" href="#" style="color: #fff">Как проехать</a>
+            </div>
         </div>
     </nav>
-    <div class="mainScrollSpy" style="position: fixed;" data-0="transform:translateY(0%);" data-1000="transform:translateY(-33.33%);" data-3750="transform:translateY(-33.33%);" data-4500="transform:translateY(-66.66%);" data-10500="transform:translateY(-66.66%)">
-        <div>
-            <!-- <section  class="loaderContainer">
-                <img class="loaderHint" style="position: absolute;" src="img/LoaderCircle.svg" width="150px">
-                <img class="loaderLogo" style="position: absolute;" src="img/loader.svg" width="75px">
-            </section> -->
-            <section id="home" class="section mainContainer">
-                <div class="mouseParal1" id="c1" data-0="transform: margin: 0" data-10500="margin: 0" ></div>
-                <div class="mouseParal2" id="c2"></div>
-                <div class="mouseParal3" id="c3"></div>
-                <div>
-                    <div class="d-flex mainBody">
-                        <h1 class="mb-5 mainName">
-                            Центр-Ойл
-                        </h1>
-                        <p class="mb-3">15 лет на рынке производства пластичных смазок!</p>
-                        <span>
-                            <a href="#" class="mainCat">Каталог <i class="fa-solid fa-arrow-right"></i></a>
-                        </span>
+    <div>
+        <div class="d-flex" style="background-color: #252525; flex-direction: column; flex-wrap: nowrap;">
+            <div style="width: 95%; margin-left: 2.5%">
+                <h1 class="mb-5 mt-5" style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 60px; font-weight: 900; color:#fff;">
+                    ПРЕДПРИЯТИЕ С ПРИОРИТЕТНЫМ<br>
+                    НАПРАВЛЕНИЕМ ПРОИЗВОДСТВА<br> 
+                    ПЛАСТИЧНЫХ СМАЗОК
+                </h1>
+            </div>
+            <div class="d-flex justify-content-center">
+                <img src="img/backMain.jpg" width="95%">
+            </div>
+            <div style="width: 95%; margin-left: 2.5%">
+                <p class="mb-5 mt-3" style="font-family: 'Work Sans', sans-serif; font-size: 25px; font-weight: 600; color:#fff;">
+                    21 год на рынке производства пластичных смазок
+                </p>
+            </div>
+        </div>
+        <div style="width: 98%; margin-left: 1%; border-bottom: solid 3px #000; padding-left: 1.5%; padding-right: 1.5%" class="mainProdText mt-5">
+            <h2 style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 50px; font-weight: 900;">ПРОДУКЦИЯ</h2>
+            <a href="#"><i class="fa-solid fa-circle-chevron-right" style="color: #E29303; background: black; padding: 0; border-radius: 50%; font-size: 35px"></i></a>
+        </div>
+        <div class="mt-5" style="display: flex; width: 95%; margin-left: 2.5%">
+            <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; width: 50%">
+                <a class="cardProd" href="#" style="display: flex; width: 45%; flex-direction: column;">
+                    <div class="cardProdImg" style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center;">
+                        <img src="img/jb.webp" width="80%">
                     </div>
-                    <div class="d-flex mainFooter">
-                        <a class="list-group-item listItem" style="text-align: center;" href="#list-item-2">О нас</a>
-                        <a class="list-group-item listItem" style="text-align: center;" href="#list-item-3">Производство</a>
-                        <a class="list-group-item listItem" style="text-align: center;" href="#list-item-4">Услуги</a>
-                        <a class="list-group-item listItem" style="text-align: center;" href="#list-item-5">Документы</a>
-                        <a class="list-group-item listItem" style="text-align: center;" href="#list-item-6">Контакт</a>
+                    <div style="width: 100%; display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-start;">
+                        <p style="font-family: 'Work Sans', sans-serif; font-size: 16px; font-weight: 900">ПРОДУКТ<br>
+                        КАТЕГОРИЯ<br>
+                        ГОСТ</p>
+                        <p class="ms-5" style="font-family: 'Work Sans', sans-serif; font-size: 16px; font-weight: 500">Циатим-201<br>
+                        Пластичная<br>
+                        ГОСТ 6267-2001<br>
+                        ГОСТ 6267-2021</p>
                     </div>
-                </div>
-            </section>
-            <section id="about" class="section aboutSection" style="display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: center; align-items: center;">
-                <div>
-                    <div style="text-align: center; width: 100%; height: 10vh" data-1100="margin-top: 35vh; position: absolute" data-1700="margin-top: 35vh; position: absolute" data-1900="margin-top: -5%">
-                        <h2 class="aboutHeaderH2" data-1100="font-size: 70px; font-weight: 600" data-1700="font-size: 70px; font-weight: 600" data-1900="font-size: 50px; font-weight: 500">О нас</h2>
-                        <p class="aboutHeaderP" data-1300="margin-top: 30%; opacity: 0" data-1500="margin-top: 0%; opacity: 1">Предприятие c приоритетным направлением<br>
-                        производства пластичных смазок</p>
+                </a>
+                <a class="cardProd" href="#" style="display: flex; width: 45%; flex-direction: column;">
+                    <div class="cardProdImg" style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center;">
+                        <img src="img/jb.webp" width="80%">
                     </div>
-                    <div class="aboutTextContainer">
-                        <div class="backAboutF" data-2200="margin-top: 70%; opacity: 0" data-2550="margin-top: 0%; opacity: 0.95">
-                            <h3 class="aboutH3">Большой выбор<br>
-                            продукции</h3>
-                            <p class="aboutP">От традиционных Солидола и Литол-24 до редко используемых смазок – делает нашу компанию жизненно необходимой для отечественной промышленности</p>
-                        </div>
-                        <div class="backAboutS" data-2900="margin-top: 70%; opacity: 0" data-3250="margin-top: 0%; opacity: 0.95">
-                            <h3 class="aboutH3">Залог успеха и<br>
-                            стабильности компании</h3>
-                            <p class="aboutP">Надёжные партнёрские отношения с ведущими потребителями смазочных материалов. Мы предлагаем Вам не только доступные цены на продукцию, но и ответственность за её качество</p>
-                            <a class="aboutA" href="#">Ознакомиться с товаром</a>
-                        </div>
-                        <div class="backAboutT" data-2550="margin-top: 70%; opacity: 0" data-2900="margin-top: 0%; opacity: 0.95">
-                            <h3 class="aboutH3">Развитие качетва<br>
-                            отечественных смазок</h3>
-                            <p class="aboutP">Разрабатываются новые смазки, совершенствуются старые и бывает не легко разобраться во всем многообразии мира смазочных материалов</p>
-                        </div>
+                    <div style="width: 100%; display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-start;">
+                        <p style="font-family: 'Work Sans', sans-serif; font-size: 16px; font-weight: 900">ПРОДУКТ<br>
+                        КАТЕГОРИЯ<br>
+                        ГОСТ</p>
+                        <p class="ms-5" style="font-family: 'Work Sans', sans-serif; font-size: 16px; font-weight: 500">Циатим-201<br>
+                        Пластичная<br>
+                        ГОСТ 6267-2001<br>
+                        ГОСТ 6267-2021</p>
                     </div>
-                    <div>
-                        <a href="#"><img class="flyTube" src="img/Grafit.svg" width="25px" data-2200="top: 105%; left: 34%; rotate: 104deg" data-3900="top: 28%; left: 25%; rotate: 57deg"></a>
-                        <a href="#"><img class="flyTube" src="img/litol_24.svg" width="25px" data-2200="top: 105%; left: 12%; rotate: 190deg" data-3900="top: 50%; left: 8%; rotate: 284deg"></a>
-                        <a href="#"><img class="flyTube" src="img/Litol-24.svg" width="22px" data-2200="top: 105%; left: 35%; rotate: 88deg" data-3900="top: 88%; left: 39%; rotate: 123deg"></a>
-                        <a href="#"><img class="flyTube" src="img/Litol-24.svg" width="22px" data-2900="top: 105%; left: 40%; rotate: 92deg" data-3900="top: 35%; left: 35%; rotate: 57deg"></a>
-                        <a href="#"><img class="flyTube" src="img/shurs-4.svg" width="22px" data-2900="top: 105%; left: 50%; rotate: 48deg" data-3900="top: 26%; left: 47%; rotate: 15deg"></a>
-                        <a href="#"><img class="flyTube" src="img/smazka-158.svg" width="50px" data-2550="top: 105%; left: 69%; rotate: 150deg" data-3900="top: 63%; left: 63%; rotate: 190deg"></a>
-                        <a href="#"><img class="flyTube" src="img/smazka-158.svg" width="50px" data-2550="top: 105%; left: 74%; rotate: 63deg" data-3900="top: 24%; left: 72%; rotate: 35deg"></a>
-                        <a href="#"><img class="flyTube" src="img/SolidolJ.svg" width="25px" data-2550="top: 105%; left: 85%; rotate: 375deg" data-3900="top: 62%; left: 89%; rotate: 329deg"></a>
-                        <a href="#"><img class="flyTube" src="img/Grafit.svg" width="25px" data-2900="top: 105%; left: 56%; rotate: 52deg" data-3900="top: 52%; left: 53%; rotate: 104deg"></a>
+                </a>
+            </div>
+            <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; width: 50%">
+                <a class="cardProd" href="#" style="display: flex; width: 45%; flex-direction: column;">
+                    <div class="cardProdImg" style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center;">
+                        <img src="img/jb.webp" width="80%">
                     </div>
-                    <div class="aboutFooter" data-3400="margin-top: 10%; position: absolute; opacity: 0" data-3700="margin-top: 0%; opacity: 1">
-                        <p data-3400="font-size: 18px" data-3700="font-size: 22px">Мы готовы помочь вам в<br>
-                        этом не легком деле!</p>
+                    <div style="width: 100%; display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-start;">
+                        <p style="font-family: 'Work Sans', sans-serif; font-size: 16px; font-weight: 900">ПРОДУКТ<br>
+                        КАТЕГОРИЯ<br>
+                        ГОСТ</p>
+                        <p class="ms-5" style="font-family: 'Work Sans', sans-serif; font-size: 16px; font-weight: 500">Циатим-201<br>
+                        Пластичная<br>
+                        ГОСТ 6267-2001<br>
+                        ГОСТ 6267-2021</p>
                     </div>
-                </div>
-            </section>
-            <section id="production" class="section" style="height: 100vh; width: 100%" data-5500="background: linear-gradient(175deg, rgb(135,169,213), rgb(255,255,255) 0%);" data-5950="background: linear-gradient(175deg, rgb(135,169,213), rgb(255,255,255) 95%);" data-6200="background: linear-gradient(175deg, rgb(135,169,213), rgb(255,255,255) 99%);" data-6300="background: linear-gradient(175deg, rgb(135,169,213), rgb(255,255,255) 100%);" data-6700="background: linear-gradient(175deg, rgb(135,169,213), rgb(135,169,213) 100%);" data-10500="background: linear-gradient(175deg, rgb(135,169,213), rgb(135,169,213) 100%);">
-                <div>
-                    <div style="display: flex; height: 10vh; position: absolute; bottom: 90vh; width: 100%; flex-direction: column; flex-wrap: nowrap; align-items: center;">
-                        <h2 class="prodHeaderH2" data-4700="font-size: 80px; font-weight: 600; margin-top: 40vh" data-5100="font-size: 60px; font-weight: 500; margin-top: 0vh" data-6200="color: rgb(0,0,0);" data-6400="color: rgb(255,255,255)">
-                            Производство
+                </a>
+                <a class="cardProd" href="#" style="display: flex; width: 45%; flex-direction: column;">
+                    <div class="cardProdImg" style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center;">
+                        <img src="img/jb.webp" width="80%">
+                    </div>
+                    <div style="width: 100%; display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-start;">
+                        <p style="font-family: 'Work Sans', sans-serif; font-size: 16px; font-weight: 900">ПРОДУКТ<br>
+                        КАТЕГОРИЯ<br>
+                        ГОСТ</p>
+                        <p class="ms-5" style="font-family: 'Work Sans', sans-serif; font-size: 16px; font-weight: 500">Циатим-201<br>
+                        Пластичная<br>
+                        ГОСТ 6267-2001<br>
+                        ГОСТ 6267-2021</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="mt-5 mb-5" style="width: 100%; text-align: center">
+            <a class="nLink" href="#" style="font-family: 'Work Sans', sans-serif; font-size: 24px; font-weight: 700; color: #E29303;">
+                Ознакомиться с каталогом
+            </a>
+        </div>
+        <div style="background-color: #252525;" class="pt-5">
+            <div style="width: 98%; margin-left: 1%; border-bottom: solid 3px white; padding-left: 1.5%; padding-right: 1.5%;">
+                <p style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 60px; font-weight: 900; color: white; margin: 0">
+                    О НАС
+                </p>
+            </div>
+            <div class="pt-5" style="position: relative; float: right; width: 100%; clear: both; margin: 0px; background-color: #252525;">
+                <div class="col-lg-6 col-sm-12">
+                    <div style="padding: 0px 110px; position: absolute; top: 50%; transform: translateY(-50%); left: 50%">
+                        <h2 style="color: white; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 32px; margin-bottom: 20%">
+                            Большой Выбор Продукции
                         </h2>
-                        <p class="prodHeaderP" data-6200="color: rgb(0,0,0);" data-6400="color: rgb(255,255,255)">
-                            Изготовление пластичных смазок<br>
-                            включает следующие операции:
+                        <p style="color: white; font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 24px; margin-bottom: 15%; text-align: justify">
+                            От традиционных Солидола и Литол-24 до редко 
+                            используемых смазок – делает нашу компанию жизненно 
+                            необходимой для отечественной промышленности
                         </p>
+                        <a href="#" class="nLink" style="color: #FDAD1C; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 24px;">
+                            Ознакомиться с продукцией
+                        </a>
                     </div>
-                    <div style="height: 90vh;">
-                        <div class="prodBody" data-5500="left: 90%; bottom: 15%; opacity: 0" data-6000="left: 65%; bottom: 15%; opacity: 1"  data-7500="left: 5%; bottom: 15%; opacity: 1" data-8000="left: -10%; bottom: 15%; opacity: 0">
-                            <h2 class="prodBodyH2">
-                                1
-                            </h2>
-                            <p class="prodBodyP" style="width: 450px !important;">
-                                Дозирование исходного сырья посредством многокомпонентных 
-                            дозирующих насосов — сохраняется необходимая концентрация сырьевых 
-                            компонентов, входящих в состав смазки
+                </div>
+                <div class="col-lg-6 col-sm-12" style="background-image: url(img/backAbout1.png); min-height: 80vh; background-size: cover; background-attachment: fixed; background-size: auto 100%; background-repeat: no-repeat;">
+                </div>
+            </div>
+            <div class="pb-5 mb-5" style="position: relative; float: right; width: 100%; clear: both; margin: 0px; background-color: #252525;">
+                <div class="col-lg-6 col-sm-12">
+                    <div style="padding: 0px 110px; position: absolute; top: 50%; transform: translateY(-50%); left: 50%">
+                        <h2 style="color: white; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 32px; margin-bottom: 20%">
+                            Залог успеха и стабильности компании
+                        </h2>
+                        <p style="color: white; font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 24px; margin-bottom: 15%; text-align: justify">
+                            Надёжные партнёрские отношения с ведущими потребителями 
+                            смазочных материалов. Мы предлагаем Вам не только доступные 
+                            цены на продукцию, но и ответственность за её качество
+                        </p>
+                        <a href="#" class="nLink" style="color: #FDAD1C; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 24px;">
+                            Ознакомиться с производством
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12" style="background-image: url(img/backAbout2.png); min-height: 80vh; background-size: cover; background-attachment: fixed; background-size: auto 100%; background-repeat: no-repeat">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="mb-5" style="width: 98%; margin-left: 1%; border-bottom: solid 3px black; padding-left: 1.5%; padding-right: 1.5%;">
+                <h2 style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 60px; font-weight: 900; color: black; margin: 0">
+                    ДОКУМЕНТЫ
+                </h2>
+            </div>
+            <div class="mt-5">
+                <div style="display: flex; width: 95%; margin-left: 2.5%; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
+                    <a href="#" style="display: flex; width: 30%; flex-direction: column;">
+                        <div style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center; padding: 5% 0 5% 0">
+                            <img src="img/svidetelstvo-o-gosregistratsii.jpg" width="90%">
+                        </div>
+                        <p style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 18px; font-weight: 300; color: black; width: 100%">Свидетельство о регистрации</p>
+                    </a>
+                    <a href="#" style="display: flex; width: 30%; flex-direction: column; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
+                        <div style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center; padding: 5% 0 5% 0">
+                            <img src="img/svidetelstvo-o-postanovke-na-uchet.jpg" width="90%">
+                        </div>
+                        <p style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 18px; font-weight: 300; color: black; width: 100%">Свидетельство о поставке на учет</p>
+                    </a>
+                    <a href="#" style="display: flex; width: 30%; flex-direction: column; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
+                        <div style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center; padding: 5% 0 5% 0">
+                            <img src="img/svidetelstvo-ogrn.jpg" width="90%">
+                        </div>
+                        <p style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 18px; font-weight: 300; color: black; width: 100%">Свидетельство о ЕРГН</p>
+                    </a>
+                </div>
+            </div>
+            <div class="collapse" id="collapseExample">
+                <div>
+                    <div style="display: flex; width: 95%; margin-left: 2.5%; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
+                        <a href="#" style="display: flex; width: 30%; flex-direction: column;">
+                            <div style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center; padding: 5% 0 5% 0">
+                                <img src="img/reshenie o naznachenii direktora.jpg" width="90%">
+                            </div>
+                            <p style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 18px; font-weight: 300; color: black; width: 100%">Решение о назначении директора</p>
+                        </a>
+                        <a href="#" style="display: flex; width: 30%; flex-direction: column; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
+                            <div style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center; padding: 5% 0 5% 0">
+                                <img src="img/iso.png" width="90%">
+                            </div>
+                            <p style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 18px; font-weight: 300; color: black; width: 100%">Сертификат менеджмента (ИСО 9001)</p>
+                        </a>
+                        <a href="#" style="display: flex; width: 30%; flex-direction: column; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
+                            <div style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center; padding: 5% 0 5% 0">
+                                <img src="img/ustav.jpg" width="90%">
+                            </div>
+                            <p style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 18px; font-weight: 300; color: black; width: 100%">Устав</p>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; width: 95%; margin-left: 2.5%; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
+                        <a href="#" style="display: flex; width: 30%; flex-direction: column;">
+                            <div style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center; padding: 5% 0 5% 0">
+                                <img src="img/vipiska.jpg" width="90%">
+                            </div>
+                            <p style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 18px; font-weight: 300; color: black; width: 100%">Выписка из ЕГРЮЛ</p>
+                        </a>
+                        <a href="#" style="display: flex; width: 30%; flex-direction: column; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
+                            <div style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center; padding: 5% 0 5% 0">
+                                <img src="img/kodStat.jpg" width="90%">
+                            </div>
+                            <p style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 18px; font-weight: 300; color: black; width: 100%">Коды статистики</p>
+                        </a>
+                        <a href="#" style="display: flex; width: 30%; flex-direction: column; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
+                            <div style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center; padding: 5% 0 5% 0">
+                                <img src="img/rekviziti.svg" width="90%">
+                            </div>
+                            <p style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 18px; font-weight: 300; color: black; width: 100%">Реквизиты</p>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; width: 95%; margin-left: 2.5%; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
+                        <a href="#" style="display: flex; width: 30%; flex-direction: column;">
+                            <div style="width: 100%; background: #ececec; display: flex; justify-content: center; align-items: center; padding: 5% 0 5% 0">
+                                <img src="img/lider.png" width="90%">
+                            </div>
+                            <p style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 18px; font-weight: 300; color: black; width: 100%">Лидер отрасли 2023</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 mb-5" style="width: 100%; text-align: center">
+                <a class="nLink" href="#collapseExample" style="color: #E29303; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 24px; text-align:center" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Ознакомиться с документами
+                </a>
+            </div>
+        </div>
+        <div class="mb-5">
+            <div class="mb-5" style="width: 98%; margin-left: 1%; border-bottom: solid 3px black; padding-left: 1.5%; padding-right: 1.5%;">
+                <h2 style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 60px; font-weight: 900; color: black; margin: 0">
+                    ПАРТНЕРЫ
+                </h2>
+            </div>
+            <div style="display: flex; width: 95%; margin-left: 2.5%; justify-content: space-around; flex-direction: row; flex-wrap: wrap;">
+                <div style="width: 23%;">
+                    <img src="img/expertOil.png" width="60%">
+                </div>
+                <div style="width: 16%;">
+                    <img src="img/oilDgrease.png" width="60%">
+                </div>
+                <div style="width: 16%">
+                    <img src="img/volgOil.png" width="60%">
+                </div>
+            </div>
+        </div>
+        <div style="height: 93vh; width: 100%; background-image: url('img/Map.webp'); background-size: cover; background-size: 100%; background-repeat: no-repeat;">
+            <div style="height: 93vh; width: 100%; background: rgb(37,37,37,0.7); display: flex; display: flex;flex-direction: row; flex-wrap: wrap; justify-content: space-around;">
+                <div class="col-lg-5 col-sm-12 mt-5">
+                    <h2 style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 50px; font-weight: 900; color: white; margin: 0; margin-bottom: 20%;">
+                        Контакты
+                    </h2>
+                    <div style="display: flex; flex-direction: column;">
+                        <div class="mb-5">
+                            <h3 style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 35px; color: white;">
+                                Менеджер отдела продаж
+                            </h3>
+                            <p style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 25px; color: white;">
+                                Егор Сташков<br>
+                                evc1@mail.ru
                             </p>
                         </div>
-                        <div class="prodBody" data-6500="left: 90%; bottom: 5%; opacity: 0" data-7000="left: 65%; bottom: 5%; opacity: 1"  data-8500="left: 5%; bottom: 5%; opacity: 1" data-9000="left: -10%; bottom: 5%; opacity: 0">
-                            <h2 class="prodBodyH2">
-                                2
-                            </h2>
-                            <p class="prodBodyP" style="width: 250px !important;">
-                                Подготовка загустителя и диспергирование в основном масле
-                            </p>
-                        </div>
-                        <div class="prodBody"  data-7300="left: 90%; bottom: 21%; opacity: 0" data-7800="left: 65%; bottom: 21%; opacity: 1"  data-9300="left: 5%; bottom: 21%; opacity: 1" data-9800="left: -10%; bottom: 21%; opacity: 0">
-                            <h2 class="prodBodyH2">
-                                3
-                            </h2>
-                            <p class="prodBodyP" style="width: 300px !important;">
-                                Варка — выпаривание избытка влаги из вещества с помощью спецпрепаратов
-                            </p>
-                        </div>
-                        <div class="prodBody" data-7700="left: 90%; bottom: 12%; opacity: 0" data-8200="left: 65%; bottom: 12%; opacity: 1"  data-9700="left: 5%; bottom: 12%; opacity: 1" data-10200="left: -10%; bottom: 12%; opacity: 0">
-                            <h2 class="prodBodyH2">
-                                4
-                            </h2>
-                            <p class="prodBodyP" style="width: 380px !important;">
-                                Охлаждение материала — формирование структурной основы смазки 
-                            посредством смешанных способов кристаллизации
-                            </p>
-                        </div>
-                        <div class="prodBody" data-8200="left: 90%; bottom: 18%; opacity: 0" data-8700="left: 65%; bottom: 18%; opacity: 1"  data-10300="left: 5%; bottom: 18%; opacity: 1" data-10500="left: 2%; bottom: 18%; opacity: 0.3">
-                            <h2 class="prodBodyH2">
-                                5
-                            </h2>
-                            <p class="prodBodyP" style="width: 455px !important">
-                                Гомогенизация — повышение уровня коллоидной и механической 
-                                устойчивости состава посредством прогона через специальную 
-                                систему сит
-                            </p>
-                        </div>
-                        <div class="prodBody" data-8900="left: 90%; bottom: 3%; opacity: 0" data-9400="left: 65%; bottom: 3%; opacity: 1"  data-10500="left: 37%; bottom: 3%; opacity: 1">
-                            <h2 class="prodBodyH2">
-                                6
-                            </h2>
-                            <p class="prodBodyP" style="width: 300px !important;">
-                                Деаэрация — устранение воздуха из готового продукта для 
-                                повышения уровня плотности
-                            </p>
-                        </div>
-                        <div class="prodBody"data-9300="left: 90%; bottom: 13%; opacity: 0" data-9800="left: 65%; bottom: 13%; opacity: 1"  data-10500="left: 56%; bottom: 13%; opacity: 1">
-                            <h2 class="prodBodyH2">
-                                7
-                            </h2>
-                            <p class="prodBodyP" style="width: 315px !important;">                              
-                                Фильтрация — удаление механических примесей с помощью 
-                                фильтров сложной конструкции
+                        <div>
+                            <h3 style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 35px; color: white;">
+                                Адрес
+                            </h3>
+                            <p style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 25px; color: white;">
+                                Свердловская область<br>
+                                г. Полевской, с. Курганово, стр. 2 Лит. 6<br>
+                                623376
                             </p>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section id="service" class="section">
-
-            </section>
-            <section id="documents" class="section">
-
-            </section>
-            <section id="contact" class="section">
-
-            </section>
-            <nav id="navigationBar" class="navigationBar">
-                <ul class="navigationMenu">
-                    <li class="navigationList">
-                        <a data-scroll="home" href="#home" class="navigationDot active">
-                            <span class="navigationSpan">Главная</span>
-                        </a>
-                    </li>
-                    <li class="navigationList">
-                        <a data-scroll="about" href="#about" class="navigationDot">
-                            <span class="navigationSpan">О нас</span>
-                        </a>
-                    </li>
-                    <li class="navigationList">
-                        <a data-scroll="production" href="#production" class="navigationDot">
-                            <span class="navigationSpan">Производство</span>
-                        </a>
-                    </li>
-                    <li class="navigationList">
-                        <a data-scroll="service" href="#service" class="navigationDot">
-                            <span class="navigationSpan">Услуги</span>
-                        </a>
-                    </li>
-                    <li class="navigationList">
-                        <a data-scroll="documents" href="#documents" class="navigationDot">
-                            <span class="navigationSpan">Документы</span>
-                        </a>
-                    </li>
-                    <li class="navigationList">
-                        <a data-scroll="contact" href="#contact" class="navigationDot">
-                            <span class="navigationSpan">Контакты</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+                <div class="col-lg-5 col-sm-12 mt-5">
+                    <h2 style="font-family: 'TT Travels Next Trial Variable', sans-serif; font-size: 50px; font-weight: 900; color: white; margin: 0; margin-bottom: 15%;">
+                        Обратная связь
+                    </h2>
+                    <form>
+                        <div class="mb-3">
+                            <label style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 25px; color: white;" for="exampleInputEmail1" class="form-label">Имя*</label>
+                            <input type="email" class="formControl" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 25px; color: white;" for="exampleInputPassword1" class="form-label">Телефон*</label>
+                            <input type="password" class="formControl" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 25px; color: white;" for="exampleInputPassword1" class="form-label">Электронная почта*</label>
+                            <input type="password" class="formControl" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 25px; color: white;" for="exampleInputPassword1" class="form-label">Сообщение*</label>
+                            <textarea class="formControl" rows="5"></textarea>
+                        </div>
+                        <div style="width: 100%; display: flex; justify-content: center;">
+                            <button type="submit"><span class="fSpan">Отправить</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="pt-5 pb-5" style="background-color: #252525; bottom: 0%;">
+            <div style="width: 95%; margin-left: 2.5%; display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between;">
+                <div style="display: flex; flex-direction: column;">
+                    <p style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 18px; color:#FDAD1C">© 2024 ООО “Центр-Ойл”<br>
+                        Продажа пластичных смазок<br>
+                        Все права защищены
+                    </p>
+                    <p style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 18px; color: white">
+                        Время работы:<br>
+                        пн-пт с 9:00 до 17:00
+                    </p>
+                    <p style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 18px; color: white">
+                        evc1@mail.ru<br>
+                    </p>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <a class="mb-2" style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 18px; color:#FDAD1C">Каталог</a>
+                    <a class="mb-2" style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 18px; color: white">Производство</a>
+                    <a class="mb-2" style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 18px; color: white">О смазках</a>
+                    <a style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 18px; color:#FDAD1C">Как проехать</a>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <a class="mb-2" style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 18px; color:#FDAD1C">Политика конфиденциальности</a>
+                    <a class="mb-2" style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 18px; color: white">Перечень пластичных смазок</a>
+                </div>
+                <div>
+                    <a style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 18px; color:#FDAD1C">Made by: V0lmer</a>
+                </div>
+            </div>
+            <div class="mt-5" style="width: 95%; margin-left: 2.5%">
+                <p style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 14px; color: white; text-align: center; margin: 0">
+                    Обращаем Ваше внимание на то, что данный интернет-сайт 
+                    носит исключительно информационный характер и ни при 
+                    каких условиях информационные материалы и цены, размещенные 
+                    на сайте, не являются публичной офертой, определяемой 
+                    положениями Статьи 437 Гражданского кодекса РФ
+                </p>
+            </div>
         </div>
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script>
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-</script>
-<script>
-    $('.toggle-menu').click (function(){
-        $(this).toggleClass('active');
-        $('#menu').toggleClass('open');
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        $(window).mousemove(function(e) {
-            parallax(e, document.getElementById('c1'), 1);
-            parallax(e, document.getElementById('c2'), 2);
-            parallax(e, document.getElementById('c3'), 3);
-        });
-    });
-    
-    function parallax(e, target, layer) {
-        var strength = 250;
-        var layer_coeff = strength / layer;
-        var x = ($(window).width() - target.offsetWidth) / 2 - (e.pageX - ($(window).width() / 2)) / layer_coeff;
-        var y = ($(window).height() - target.offsetHeight) / 2 - (e.pageY - ($(window).height() / 2)) / layer_coeff;
-        $(target).offset({
-            top: y,
-            left: x
-        });
-    };
-</script>
-<script>
-    $(function() {
-  
-        var link = $('#navbar a.dot');
-        link.on('click', function(e) {
-            var target = $($(this).attr('href'));
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            }, 600);
-            $(this).addClass('active');
-            e.preventDefault();
-        });
-
-        $(window).on('scroll', function(){
-            scrNav();
-        });
-
-        function scrNav() {
-            var sTop = $(window).scrollTop();
-            $('section').each(function() {
-                var id = $(this).attr('id'),
-                    offset = $(this).offset().top-1,
-                    height = $(this).height();
-                if(sTop >= offset && sTop < offset + height) {
-                    link.removeClass('active');
-                    $('#navbar').find('[data-scroll="' + id + '"]').addClass('active');
-                }
-            });
-        }
-        scrNav();
-    });
 </script>
 <script type="text/javascript" src="js/skrollr.min.js"></script>
 <script type="text/javascript">
