@@ -163,11 +163,11 @@ button:hover:after, button:focus:after{
         transition: all 0.3s ease-in-out;
         border-radius: 0;
     }
-
+/* 
     .cardProdImg img {
         width: 80%;
         transition: all 0.3s ease-in-out;
-    }
+    } */
 }
 
 .cardProd:hover {
@@ -176,10 +176,29 @@ button:hover:after, button:focus:after{
         filter: blur(3px);
         transition: all 0.3s ease-in-out;
     }
-
+/* 
     .cardProdImg img {
         width: 75%;
         transition: all 0.3s ease-in-out;
+    } */
+}
+
+.statesLink {
+    transition: background-color .3s ease-in-out;
+}
+
+.statesLink p {
+    color: black;
+    transition: color .275s ease-in-out
+}
+
+@media(hover: hover)and (pointer:fine) {
+    .statesLink:hover {
+        background-color: #252525;
+    }
+
+    .statesLink:hover p {
+        color: #FDAD1C
     }
 }
 
