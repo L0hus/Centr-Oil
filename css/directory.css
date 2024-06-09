@@ -1,0 +1,89 @@
+.formControl {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: rgb(255,255,255,0);
+    background-clip: padding-box;
+    border: 2px solid black;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.formControl:focus {
+    color: #E29303;
+    border-color: #E29303;
+    outline: 0;
+}
+
+button{
+    display: block;
+    width: 200px;
+    height: 50px;
+    color: black;
+    line-height: 40px;
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    background-color: rgb(0,0,0,0);
+    color: #E29303;
+    border: 2px solid #E29303;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+  
+button .fSpan{
+    position: relative;
+    z-index: 2;
+}
+  
+button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #E29303;
+    transition: all .35s;
+}
+  
+button:hover, button:focus {
+    color: #fff;
+    transition: all .35s;
+}
+  
+button:hover:after, button:focus:after{
+    width: 100%;
+}
+
+.collapseProd {
+    background-color: #252525;
+    transition: all 0.3s;
+    width: 100%; display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 2% 0 2% 0; 
+    background: #252525; 
+    color: white;
+    transition: all .35s;
+}
+
+
+.collapseProd:hover {
+    background-color: #E29303;
+    color: black;
+    transition: all 0.3s;
+}
+
+.collapseProd:not(.collapsed) {
+    background-color: #E29303;
+    color: black;
+    transition: all 0.3s;
+}
