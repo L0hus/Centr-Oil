@@ -63,3 +63,27 @@ button:hover:after, button:focus:after{
     width: 100%;
 }
 
+.collapseProd {
+    background-color: #252525;
+    transition: all 0.3s;
+    width: 100%; display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 2% 0 2% 0; 
+    background: #252525; 
+    color: white;
+    transition: all .35s;
+}
+
+
+.collapseProd:hover {
+    background-color: #E29303;
+    color: black;
+    transition: all 0.3s;
+}
+
+.collapseProd:not(.collapsed) {
+    background-color: #E29303;
+    color: black;
+    transition: all 0.3s;
+}
