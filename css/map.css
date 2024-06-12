@@ -1,0 +1,905 @@
+.formControl:focus {
+    color: #E29303;
+    border-color: #E29303;
+    outline: 0;
+}
+  
+button .fSpan{
+    position: relative;
+    z-index: 2;
+}
+  
+button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #E29303;
+    transition: all .35s;
+}
+  
+button:hover, button:focus {
+    color: #fff;
+    transition: all .35s;
+}
+  
+button:hover:after, button:focus:after{
+    width: 100%;
+}
+
+/* Карта *//* Карта *//* Карта *//* Карта *//* Карта *//* Карта *//* Карта */
+
+@media only screen and (max-width: 360px) {
+
+    .mapContainer {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .mapContact {
+        margin-bottom: 1rem;
+        width: 95%; 
+        display: flex; 
+        margin-left: 2.5%; 
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .mapContactContainer {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .mapContactContent {
+        margin-bottom: 1rem;
+        width: 46%;
+    }
+    
+    .mapContactH {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 400; 
+        font-size: 11px; 
+        color: black;
+    }
+    
+    .mapContactP {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 10px; 
+        color: black;
+    }
+
+    .mapCoordinateContent {
+        display: flex;
+        position:relative;
+        overflow:hidden;
+        justify-content: center;
+    }
+    
+    .mapCoordinate {
+        width: 85%;
+        height: 20%;
+    }
+
+    .mapFeedbackHeader {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-family: 'TT Travels Next Trial Variable', sans-serif; 
+        font-size: 10px; 
+        font-weight: 900; 
+        color: black; 
+        margin: 0;
+    }
+
+    .mapFeedback {
+        width: 80%;
+    }
+
+    .mapFeedbackContent {
+        margin-bottom: 0.25rem;
+    }
+
+    .mapFeedbackInput {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 8px; 
+        color: black;
+        margin: 0;
+    }
+
+    .formControl {
+        display: block;
+        width: 100%;
+        padding: 2px 3px;
+        font-size: 7;
+        font-weight: 400;
+        line-height: 0.5;
+        color: black;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: rgb(255,255,255,0);
+        background-clip: padding-box;
+        border: 1px solid black;
+        border-radius: 0;
+        transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+
+    button{
+        display: block;
+        width: 60px;
+        height: 20px;
+        color: black;
+        line-height: 20px;
+        font-size: 8px;
+        font-family: 'Work Sans', sans-serif;
+        text-decoration: none;
+        background-color: rgb(0,0,0,0);
+        color: #E29303;
+        border: 1px solid #E29303;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+    }
+
+}
+
+@media only screen and (min-width: 361px) {
+
+    .mapContainer {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .mapContact {
+        margin-bottom: 1rem;
+        width: 95%; 
+        display: flex; 
+        margin-left: 2.5%; 
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .mapContactContainer {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .mapContactContent {
+        margin-bottom: 1rem;
+        width: 39%;
+    }
+    
+    .mapContactH {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 400; 
+        font-size: 15px; 
+        color: black;
+    }
+    
+    .mapContactP {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 11px; 
+        color: black;
+    }
+
+    .mapCoordinateContent {
+        display: flex;
+        position:relative;
+        overflow:hidden;
+        justify-content: center;
+    }
+    
+    .mapCoordinate {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .mapFeedbackHeader {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-family: 'TT Travels Next Trial Variable', sans-serif; 
+        font-size: 15px; 
+        font-weight: 900; 
+        color: black; 
+        margin: 0;
+    }
+
+    .mapFeedback {
+        width: 80%;
+    }
+
+    .mapFeedbackContent {
+        margin-bottom: 0.25rem;
+    }
+
+    .mapFeedbackInput {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 12px; 
+        color: black;
+        margin: 0;
+    }
+
+    .formControl {
+        display: block;
+        width: 100%;
+        padding: 3px 4px;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 0.5;
+        color: black;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: rgb(255,255,255,0);
+        background-clip: padding-box;
+        border: 1px solid black;
+        border-radius: 0;
+        transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+
+    button{
+        display: block;
+        width: 80px;
+        height: 25px;
+        color: black;
+        line-height: 20px;
+        font-size: 10px;
+        font-family: 'Work Sans', sans-serif;
+        text-decoration: none;
+        background-color: rgb(0,0,0,0);
+        color: #E29303;
+        border: 1px solid #E29303;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+    }
+
+}
+
+@media only screen and (min-width: 450px) {
+
+    .mapContainer {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .mapContact {
+        margin-bottom: 1rem;
+        width: 95%; 
+        display: flex; 
+        margin-left: 2.5%; 
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .mapContactContainer {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .mapContactContent {
+        margin-bottom: 1rem;
+        width: 39%;
+    }
+    
+    .mapContactH {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 400; 
+        font-size: 18px; 
+        color: black;
+    }
+    
+    .mapContactP {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 13px; 
+        color: black;
+    }
+
+    .mapCoordinateContent {
+        display: flex;
+        position:relative;
+        overflow:hidden;
+        justify-content: center;
+    }
+    
+    .mapCoordinate {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .mapFeedbackHeader {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-family: 'TT Travels Next Trial Variable', sans-serif; 
+        font-size: 18px; 
+        font-weight: 900; 
+        color: black; 
+        margin: 0;
+    }
+
+    .mapFeedback {
+        width: 80%;
+    }
+
+    .mapFeedbackContent {
+        margin-bottom: 0.25rem;
+    }
+
+    .mapFeedbackInput {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 14px; 
+        color: black;
+        margin: 0;
+    }
+
+    .formControl {
+        display: block;
+        width: 100%;
+        padding: 3px 4px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1;
+        color: black;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: rgb(255,255,255,0);
+        background-clip: padding-box;
+        border: 1px solid black;
+        border-radius: 0;
+        transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+
+    button{
+        display: block;
+        width: 80px;
+        height: 25px;
+        color: black;
+        line-height: 20px;
+        font-size: 10px;
+        font-family: 'Work Sans', sans-serif;
+        text-decoration: none;
+        background-color: rgb(0,0,0,0);
+        color: #E29303;
+        border: 1px solid #E29303;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+    }
+
+}
+
+@media only screen and (min-width: 786px) {
+
+    .mapContainer {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .mapContact {
+        margin-bottom: 1rem;
+        width: 95%; 
+        display: flex; 
+        margin-left: 2.5%; 
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .mapContactContainer {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .mapContactContent {
+        margin-bottom: 1rem;
+        width: 39%;
+    }
+    
+    .mapContactH {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 400; 
+        font-size: 21px; 
+        color: black;
+    }
+    
+    .mapContactP {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 15px; 
+        color: black;
+    }
+
+    .mapCoordinateContent {
+        display: flex;
+        position:relative;
+        overflow:hidden;
+        justify-content: center;
+    }
+    
+    .mapCoordinate {
+        width: 600px;
+        height: 50vh;
+    }
+
+    .mapFeedbackHeader {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-family: 'TT Travels Next Trial Variable', sans-serif; 
+        font-size: 21px; 
+        font-weight: 900; 
+        color: black; 
+        margin: 0;
+    }
+
+    .mapFeedback {
+        width: 80%;
+    }
+
+    .mapFeedbackContent {
+        margin-bottom: 0.25rem;
+    }
+
+    .mapFeedbackInput {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 15px; 
+        color: black;
+        margin: 0;
+    }
+
+    .formControl {
+        display: block;
+        width: 100%;
+        padding: 3px 4px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1;
+        color: black;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: rgb(255,255,255,0);
+        background-clip: padding-box;
+        border: 1px solid black;
+        border-radius: 0;
+        transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+
+    button{
+        display: block;
+        width: 100px;
+        height: 30px;
+        color: black;
+        line-height: 20px;
+        font-size: 14px;
+        font-family: 'Work Sans', sans-serif;
+        text-decoration: none;
+        background-color: rgb(0,0,0,0);
+        color: #E29303;
+        border: 1px solid #E29303;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .mapContainer {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .mapContact {
+        margin-bottom: 2rem;
+        width: 95%;
+        display: flex;
+        margin-left: 2.5%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .mapContactContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mapContactContent {
+        margin-bottom: 2rem;
+        width: 90%;
+    }
+    
+    .mapContactH {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 400; 
+        font-size: 24px; 
+        color: black;
+    }
+    
+    .mapContactP {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 18px; 
+        color: black;
+    }
+    
+    .mapCoordinate {
+        width: 100%;
+        height: 500
+    }
+
+    .mapFeedbackHeader {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-family: 'TT Travels Next Trial Variable', sans-serif; 
+        font-size: 24px; 
+        font-weight: 900; 
+        color: black; 
+        margin: 0;
+    }
+
+    .mapFeedback {
+        width: 70%;
+    }
+
+    .mapFeedbackContent {
+        margin-bottom: 1rem;
+    }
+
+    .mapFeedbackInput {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 20px; 
+        color: black;
+    }
+
+    .formControl {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: black;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: rgb(255,255,255,0);
+        background-clip: padding-box;
+        border: 2px solid black;
+        border-radius: 0;
+        transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+
+    button{
+        display: block;
+        width: 200px;
+        height: 50px;
+        color: black;
+        line-height: 40px;
+        font-size: 20px;
+        font-family: 'Work Sans', sans-serif;
+        text-decoration: none;
+        background-color: rgb(0,0,0,0);
+        color: #E29303;
+        border: 2px solid #E29303;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+    }
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+    .mapContainer {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    
+    .mapContact {
+        margin-bottom: 3rem;
+        width: 95%; 
+        display: flex; 
+        margin-left: 2.5%; 
+        align-items: center;
+    }
+    
+    .mapContactContent {
+        margin-bottom: 3rem;
+    }
+    
+    .mapContactH {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 400; 
+        font-size: 30px; 
+        color: black;
+    }
+    
+    .mapContactP {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 20px; 
+        color: black;
+    }
+    
+    .mapCoordinate {
+        width: 100%;
+        height: 650
+    }
+
+    .mapFeedbackHeader {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-family: 'TT Travels Next Trial Variable', sans-serif; 
+        font-size: 40px; 
+        font-weight: 900; 
+        color: black; 
+        margin: 0;
+    }
+
+    .mapFeedback {
+        width: 40%;
+    }
+
+    .mapFeedbackContent {
+        margin-bottom: 1rem;
+    }
+
+    .mapFeedbackInput {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 20px; 
+        color: black;
+    }
+
+    .formControl {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: black;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: rgb(255,255,255,0);
+        background-clip: padding-box;
+        border: 2px solid black;
+        border-radius: 0;
+        transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+
+    button{
+        display: block;
+        width: 200px;
+        height: 50px;
+        color: black;
+        line-height: 40px;
+        font-size: 20px;
+        font-family: 'Work Sans', sans-serif;
+        text-decoration: none;
+        background-color: rgb(0,0,0,0);
+        color: #E29303;
+        border: 2px solid #E29303;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+    }
+
+}
+
+@media only screen and (min-width: 1920px) {
+
+    .mapContainer {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    
+    .mapContact {
+        margin-bottom: 3rem;
+        width: 95%; 
+        display: flex; 
+        margin-left: 2.5%; 
+        align-items: center;
+    }
+    
+    .mapContactContent {
+        margin-bottom: 3rem;
+    }
+    
+    .mapContactH {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 400; 
+        font-size: 40px; 
+        color: black;
+    }
+    
+    .mapContactP {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 28px; 
+        color: black;
+    }
+    
+    .mapCoordinate {
+        width: 100%;
+        height: 750
+    }
+
+    .mapFeedbackHeader {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-family: 'TT Travels Next Trial Variable', sans-serif; 
+        font-size: 40px; 
+        font-weight: 900; 
+        color: black; 
+        margin: 0;
+    }
+
+    .mapFeedback {
+        width: 50%;
+    }
+
+    .mapFeedbackContent {
+        margin-bottom: 1rem;
+    }
+
+    .mapFeedbackInput {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 24px; 
+        color: black;
+    }
+
+    .formControl {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: black;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: rgb(255,255,255,0);
+        background-clip: padding-box;
+        border: 2px solid black;
+        border-radius: 0;
+        transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+
+    button{
+        display: block;
+        width: 200px;
+        height: 50px;
+        color: black;
+        line-height: 40px;
+        font-size: 20px;
+        font-family: 'Work Sans', sans-serif;
+        text-decoration: none;
+        background-color: rgb(0,0,0,0);
+        color: #E29303;
+        border: 2px solid #E29303;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+    }
+
+}
+
+@media only screen and (min-width: 2560px) {
+
+    .mapContainer {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    
+    .mapContact {
+        margin-bottom: 3rem;
+        width: 95%; 
+        display: flex; 
+        margin-left: 2.5%; 
+        align-items: center;
+    }
+    
+    .mapContactContent {
+        margin-bottom: 3rem;
+    }
+    
+    .mapContactH {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 400; 
+        font-size: 50px; 
+        color: black;
+    }
+    
+    .mapContactP {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 34px; 
+        color: black;
+    }
+    
+    .mapCoordinate {
+        width: 100%;
+        height: 750
+    }
+
+    .mapFeedbackHeader {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-family: 'TT Travels Next Trial Variable', sans-serif; 
+        font-size: 50px; 
+        font-weight: 900; 
+        color: black; 
+        margin: 0;
+    }
+
+    .mapFeedback {
+        width: 50%;
+    }
+
+    .mapFeedbackContent {
+        margin-bottom: 3em;
+    }
+
+    .mapFeedbackInput {
+        font-family: 'Work Sans', sans-serif; 
+        font-weight: 300; 
+        font-size: 26px; 
+        color: black;
+    }
+
+    .formControl {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: black;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: rgb(255,255,255,0);
+        background-clip: padding-box;
+        border: 2px solid black;
+        border-radius: 0;
+        transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+
+    button{
+        display: block;
+        width: 240px;
+        height: 60px;
+        color: black;
+        line-height: 40px;
+        font-size: 26px;
+        font-family: 'Work Sans', sans-serif;
+        text-decoration: none;
+        background-color: rgb(0,0,0,0);
+        color: #E29303;
+        border: 2px solid #E29303;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+    }
+
+}
+
+/* Карта *//* Карта *//* Карта *//* Карта *//* Карта *//* Карта *//* Карта */
