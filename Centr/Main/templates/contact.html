@@ -1,0 +1,26 @@
+<form class="mapFeedback" name="contact-form" method="post" action="{% url 'contact' %}">
+    {% csrf_token %}
+    <div class="feedmackImgBodyContainer1">
+        <div class="feedbackImgBody1">
+            <label for="Name" class="form-label feedbackImgLabel">Имя*</label>
+            {{ form.name }}
+        </div>
+        <div class="feedbackImgBody2">
+            <label for="Phone" class="form-label feedbackImgLabel">Телефон*</label>
+            {{ form.phone }}
+        </div>
+    </div>
+    <div class="feedmackImgBodyContainer2">
+        <div class="feedbackImgBody">
+            <label for="Email" class="form-label feedbackImgLabel">Электронная почта*</label>
+            {{ form.email }}
+        </div>
+        <div class="feedbackImgBody">
+            <label for="Message" class="form-label feedbackImgLabel">Сообщение*</label>
+            {{ form.message }}
+        </div>
+    </div>
+    <div class="feedbackImgButton">
+        <button type="submit"><span class="fSpan">Отправить</span></button>
+    </div>
+</form>

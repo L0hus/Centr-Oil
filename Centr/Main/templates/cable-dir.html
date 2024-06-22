@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Канатные смазки</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/directory.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/tt-travels-next-trl" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="{% static "img/logoIcon32.png" %}" rel="shortcut icon" type="image/x-icon">
+    <link href="{% static "img/logoIcon256.png" %}" rel="apple-touch-icon">
+    <script src="{% static "js/bootstrap/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootstrap/popper.min.js" %}"></script>
+    <script src="https://kit.fontawesome.com/10bf1f9c8a.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            document.querySelector('html').classList.add('loaded');
+          };
+    </script>
+</head>
+
+<body>
+    <div class="loaderContainer">
+        <img class="loaderCircle" src="{% static "img/loaderCircle.svg" %}">
+        <img class="loaderLogo" src="{% static "img/loaderLogo.png" %}">
+    </div>
+    <div class="transitionContainer"></div>
+    <nav class="navbar sticky-top">
+        <div class="container-fluid">
+            <div class="navbarContent">
+                <a href="{% url "home" %}" class="navbar-brand navLogo transitionLink"><img src="{% static "img/logo.png" %}"></a>
+                <a href="{% url "catalog" %}" class="nav-link nLink navLinks transitionLink">Каталог</a>
+                <a href="{% url "production" %}" class="nav-link nLink nLinks transitionLink">Производство</a>
+                <a href="{% url "directory" %}" class="nav-link nLink nLinks transitionLink">О смазках</a>
+            </div>
+            <div>
+                <a href="{% url "map" %}" class="nav-link nLink nMap transitionLink">Как проехать</a>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="tipsHeader">
+            <p class="tipsHeaderP">
+                КАНАТНЫЕ СМАЗКИ
+            </p>
+        </div>
+        <div class="articlesTop">
+            <p class="articlesText">Канатные смазки снижают трение между отдельными проволоками 
+                или прядями стальных канатов, а также предотвращают их коррозию. Это 
+                продукт нефтяной перегонки, который изготавливается из чистого нефтяного 
+                масла без примесей. Для сгущения состава используются углеводороды. 
+                Также в процессе выработки канатные смазки обрабатываются противогнилостными 
+                присадками</p>
+            <p>Смазочный материал представляет собой густую однородную массу, цвет варьируется от темно-желтого до коричневого. Гарантийный срок хранения состава — 5 лет с даты выработки</p>
+        </div>
+        <div class="articlesProduct">
+            <p class="articlesProductHeader">Предлагаем к поставке канатные смазки</p>
+            <div class="articleProdBodyContainer">
+                <div class="prodCardBody">
+                    <a href="/catalog/cable/19" class="cardProd transitionLink">
+                        <div class="cardProdImg">
+                            <img src="{% static "img/jb.webp" %}" width="80%">
+                        </div>
+                        <div class="catalogCategoryInfo">
+                            <p class="catalogCategoryName" style="color: white">ПРОДУКТ<br>
+                            КАТЕГОРИЯ<br>
+                            ТУ</p>
+                            <p class="catalogCategoryText" style="color: white">Торсиол-35<br>
+                            Канатная<br>
+                            ТУ 38 УССР 2-01-214-80</p>
+                        </div>
+                    </a>
+                    <a href="/catalog/cable/20" class="cardProd transitionLink">
+                        <div class="cardProdImg">
+                            <img src="{% static "img/jb.webp" %}" width="80%">
+                        </div>
+                        <div class="catalogCategoryInfo">
+                            <p class="catalogCategoryName" style="color: white">ПРОДУКТ<br>
+                            КАТЕГОРИЯ<br>
+                            ГОСТ</p>
+                            <p class="catalogCategoryText" style="color: white">Торсиол-55<br>
+                            Канатная<br>
+                            ГОСТ 20458-89</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="prodCardBody">
+                    <a href="/catalog/cable/21" class="cardProd transitionLink">
+                        <div class="cardProdImg">
+                            <img src="{% static "img/jb.webp" %}" width="80%">
+                        </div>
+                        <div class="catalogCategoryInfo">
+                            <p class="catalogCategoryName" style="color: white">ПРОДУКТ<br>
+                            КАТЕГОРИЯ<br>
+                            ТУ</p>
+                            <p class="catalogCategoryText" style="color: white">39У<br>
+                            Канатная<br>
+                            ТУ 38 УССР 201335-80</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="prodFooter">
+                <a href="{% url "catalog" %}" class="nLink transitionLink">
+                    Ознакомиться с каталогом
+                </a>
+            </div>
+        </div>
+        <div class="articlesCenter">
+            <b>Существуют три основных группы канатных смазок:</b>
+            <ul class="articlesText">
+                <li class="articlesList">- Общего назначения — используются со стальными канатами всех типов</li>
+                <li class="articlesList">- Фрикционные — применяются для смазки канатов в подъемных механизмах, оснащенных фрикционными шкивами</li>
+                <li>- Пропитки — разработаны для пеньковых сердечников тросов</li>
+            </ul>
+            <p class="articlesText">Большинство канатных смазок взаимозаменяемы. 
+                При отсутствии специальных смазочных составов вместо них можно 
+                использовать обычные антифрикционные и консервационные смазки, 
+                например ПВК или солидол С. Рекомендуется перед применением вводить 
+                в них графит в количестве от 5 до 10 %</p>
+            <p>Вся продукция в каталоге соответствует ГОСТам и ТУ, а также 
+                высоким внутренним стандартам качества компании. Отгружаем 
+                смазочные материалы только оптом</p>
+            <p class="articlesBottom">Мы отгружаем смазочные материалы во все регионы России и страны Таможенного союза. 
+                Также возможен самовывоз со склада готовой продукции. Стоимость зависит 
+                от объема партии, срочности изготовления, марки и состава смазки</p>
+        </div>
+        <div class="contactContainer">
+            <div class="col-lg-5 col-sm-12 contactContent">
+                <h2 class="contactHeader">
+                    Контакты
+                </h2>
+                <div class="contactBody">
+                    <div class="contactBodyText">
+                        <h3 class="contactBodyH">
+                            Менеджер отдела продаж
+                        </h3>
+                        <p class="contactBodyP">
+                            Егор Сташков<br>
+                            evc1@mail.ru
+                        </p>
+                    </div>
+                    <div class="contactBodyText">
+                        <h3 class="contactBodyH">
+                            Адрес
+                        </h3>
+                        <p class="contactBodyP">
+                            Свердловская область<br>
+                            г. Полевской, с. Курганово, стр. 2 Лит. 6<br>
+                            623376
+                        </p>
+                    </div>
+                </div>
+                <div class="contactBodyLinks">
+                    <a class="nLink contactBodyLink transitionLink" href="{% url "map" %}">
+                        Ознакомиться с картой
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12 contactContent">
+                <h2 class="feedbackHeader">
+                    Обратная связь
+                </h2>
+                {% include 'contact.html' with form=form %}
+            </div>
+        </div>
+        <div class="articleFooter" style="width: 95%; margin-left: 2.5%; display: flex; flex-direction: row; justify-content: space-between;">
+            <a href="{% url "aviation" %}" class="nLink articleFooterPrev transitionLink" ><i class="fa-solid fa-angle-left"></i> Авиационные смазки</a>
+            <a href="{% url "directory" %}" class="nLink articleFooterMain transitionLink">О смазках</a>
+            <a href="{% url "conservation" %}" class="nLink articleFooterNext transitionLink">Консервационные смазки <i class="fa-solid fa-angle-right"></i></a>
+        </div>
+        <div class="footerContainer">
+            <div class="footerBody">
+                <div class="footerBodyCompany">
+                    <p class="footerBodyCompanyCopy">© 2024 ООО “Центр-Ойл”<br>
+                        Продажа пластичных смазок<br>
+                        Все права защищены
+                    </p>
+                    <p class="footerBodyCompanyTime">
+                        Время работы:<br>
+                        пн-пт с 9:00 до 17:00
+                    </p>
+                    <p class="footerBodyCompanyMail">
+                        evc1@mail.ru<br>
+                    </p>
+                </div>
+                <div class="footerBodyNav">
+                    <a href="{% url "catalog" %}" class="footerBodyNavMainLink transitionLink">Каталог</a>
+                    <a href="{% url "production" %}" class="footerBodyNavLink transitionLink">Производство</a>
+                    <a href="{% url "directory" %}" class="footerBodyNavLink transitionLink">О смазках</a>
+                    <a href="{% url "map" %}" class="footerBodyNavMainLink2 transitionLink">Как проехать</a>
+                </div>
+                <div class="footerBodyDocs">
+                    <a href="{% url "privacy" %}" class="footerBodyDoscMain transitionLink">Политика конфиденциальности</a>
+                    <a href="{% static "docs/pricelist.xls" %}" class="footerBodyDocsPrimary">Перечень пластичных смазок</a>
+                </div>
+                <div>
+                    <a href="https://v0lmer.xyz" class="footerBodyMade transitionLink">Made by: V0lmer</a>
+                </div>
+            </div>
+            <div class="footerBodyNotice">
+                <p class="footerBodyNoticeText">
+                    Обращаем Ваше внимание на то, что данный интернет-сайт 
+                    носит исключительно информационный характер и ни при 
+                    каких условиях информационные материалы и цены, размещенные 
+                    на сайте, не являются публичной офертой, определяемой 
+                    положениями Статьи 437 Гражданского кодекса РФ
+                </p>
+            </div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
+<script>
+    window.addEventListener('pageshow', function() {
+        const transitionContainer = document.querySelector('.transitionContainer');
+        transitionContainer.classList.remove('active');
+        sessionStorage.removeItem('transitionActive');
+    });
+
+    document.querySelectorAll('.transitionLink').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const transitionContainer = document.querySelector('.transitionContainer');
+            transitionContainer.classList.add('active');
+            
+            const linkHref = event.currentTarget.href;
+            
+            sessionStorage.setItem('transitionActive', 'true');
+            
+            setTimeout(function() {
+                window.location.href = linkHref;
+            }, 1000);
+        });
+    });
+</script>
+</body>
+
+</html>

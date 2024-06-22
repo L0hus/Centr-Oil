@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр-Ойл</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/tt-travels-next-trl" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="{% static 'img/logoIcon32.png' %}" rel="shortcut icon" type="image/x-icon">
+    <link href="{% static 'img/logoIcon256.png' %}" rel="apple-touch-icon">
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <script src="https://kit.fontawesome.com/10bf1f9c8a.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            document.querySelector('html').classList.add('loaded');
+          };
+    </script>
+</head>
+
+<body>
+    <div class="loaderContainer">
+        <img class="loaderCircle" src="{% static "img/loaderCircle.svg" %}">
+        <img class="loaderLogo" src="{% static "img/loaderLogo.png" %}">
+    </div>
+    <div class="transitionContainer"></div>
+    <nav class="navbar sticky-top">
+        <div class="container-fluid">
+            <div class="navbarContent">
+                <a href="{% url "home" %}" class="navbar-brand navLogo transitionLink"><img src="{% static "img/logo.png" %}"></a>
+                <a href="{% url "catalog" %}" class="nav-link nLink navLinks transitionLink">Каталог</a>
+                <a href="{% url "production" %}" class="nav-link nLink nLinks transitionLink">Производство</a>
+                <a href="{% url "directory" %}" class="nav-link nLink nLinks transitionLink">О смазках</a>
+            </div>
+            <div>
+                <a href="{% url "map" %}" class="nav-link nLink nMap transitionLink">Как проехать</a>
+            </div>
+        </div>
+    </nav>
+    <div style="overflow-x: hidden;">
+        <div class="sloganContent">
+            <div class="sloganHeader">
+                <h1 class="sloganHeaderText" style="font-style: normal">
+                    ПРЕДПРИЯТИЕ С ПРИОРИТЕТНЫМ<br>
+                    НАПРАВЛЕНИЕМ ПРОИЗВОДСТВА<br> 
+                    ПЛАСТИЧНЫХ СМАЗОК
+                </h1>
+            </div>
+            <div class="d-flex justify-content-center">
+                <img src="{% static "img/backMain.jpg" %}" width="95%">
+            </div>
+            <div class="sloganFooter">
+                <p class="sloganFooterText">
+                    21 год на рынке производства пластичных смазок
+                </p>
+            </div>
+        </div>
+        <div class="mainProdText prodHeader">
+            <h2 class="prodHeaderH">ПРОДУКЦИЯ</h2>
+            <a href="{% url "catalog" %}" class="transitionLink"><i class="fa-solid fa-circle-chevron-right"></i></a>
+        </div>
+        <div class="prodBodyContainer">
+            <div class="prodCardBody">
+                <a class="cardProd transitionLink" href="/catalog/resistant/81">
+                    <div class="cardProdImg">
+                        <img src="{% static "img/jb.webp" %}" width="80%">
+                    </div>
+                    <div class="cardDescription">
+                        <p class="cardDescriptionNamed">ПРОДУКТ<br>
+                        КАТЕГОРИЯ<br>
+                        ГОСТ</p>
+                        <p class="cardDescriptionText">Циатим-221<br>
+                        Термостойкая<br>
+                        ГОСТ 9433-2021</p>
+                    </div>
+                </a>
+                <a class="cardProd transitionLink" href="/catalog/railway/9">
+                    <div class="cardProdImg">
+                        <img src="{% static "img/jb.webp" %}" width="80%">
+                    </div>
+                    <div class="cardDescription">
+                        <p class="cardDescriptionNamed">ПРОДУКТ<br>
+                        КАТЕГОРИЯ<br>
+                        ТУ</p>
+                        <p class="cardDescriptionText">ЖТ-79Л<br>
+                        Железнодорожная<br>
+                        ТУ 32 ЦТ 1176-83</p>
+                    </div>
+                </a>
+            </div>
+            <div class="prodCardBody">
+                <a class="cardProd transitionLink" href="/catalog/multi/33">
+                    <div class="cardProdImg">
+                        <img src="{% static "img/jb.webp" %}" width="80%">
+                    </div>
+                    <div class="cardDescription">
+                        <p class="cardDescriptionNamed">ПРОДУКТ<br>
+                        КАТЕГОРИЯ<br>
+                        ГОСТ</p>
+                        <p class="cardDescriptionText">Литол-24<br>
+                        Литиевая<br>
+                        ГОСТ 21150-2017</p>
+                    </div>
+                </a>
+                <a class="cardProd transitionLink" href="/catalog/conductive/86">
+                    <div class="cardProdImg">
+                        <img src="{% static "img/jb.webp" %}" width="80%">
+                    </div>
+                    <div class="cardDescription">
+                        <p class="cardDescriptionNamed">ПРОДУКТ<br>
+                        КАТЕГОРИЯ<br>
+                        ТУ</p>
+                        <p class="cardDescriptionText">Суперконтакт<br>
+                        Токопроводящая<br>
+                        ТУ 19.20.29-004-62027624-2019</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="prodFooter">
+            <a class="nLink transitionLink" href="{% url "catalog" %}">
+                Ознакомиться с каталогом
+            </a>
+        </div>
+        <div class="aboutContainer">
+            <div class="aboutHeader">
+                <p class="aboutHeaderText">
+                    О НАС
+                </p>
+            </div>
+            <div class="aboutBodyContainer1">
+                <div class="col-lg-6 aboutBodyImg1">
+                </div>
+                <div class="col-lg-6">
+                    <div class="aboutBodyContent">
+                        <h2 class="aboutBodyContentH">
+                            Большой Выбор Продукции
+                        </h2>
+                        <p class="aboutBodyContentP">
+                            От традиционных Солидола и Литол-24 до редко 
+                            используемых смазок – делает нашу компанию жизненно 
+                            необходимой для отечественной промышленности
+                        </p>
+                        <a href="{% url "directory" %}" class="nLink aboutBodyContentLink transitionLink">
+                            Ознакомиться с продукцией
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutBodyContainer2">
+                <div class="col-lg-6 aboutBodyImg2">
+                </div>
+                <div class="col-lg-6">
+                    <div class="aboutBodyContent">
+                        <h2 class="aboutBodyContentH">
+                            Не нашли нужную смазку?
+                        </h2>
+                        <p class="aboutBodyContentP">
+                            Если Вы не нашли нужную Вам смазку, заполните форму 
+                            обратной связи или напишите нашему менеджеру отдела продаж. 
+                            Мы согласуем с производством возможность ее изготовления 
+                            специально для Вас
+                        </p>
+                        <a href="{% url "map" %}" class="nLink aboutBodyContentLink transitionLink">
+                            Ознакомиться с контактами
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutBodyContainer3">
+                <div class="col-lg-6 aboutBodyImg3">
+                </div>
+                <div class="col-lg-6">
+                    <div class="aboutBodyContent">
+                        <h2 class="aboutBodyContentH">
+                            Залог успеха и стабильности компании
+                        </h2>
+                        <p class="aboutBodyContentP">
+                            Надёжные партнёрские отношения с ведущими потребителями 
+                            смазочных материалов. Мы предлагаем Вам не только доступные 
+                            цены на продукцию, но и ответственность за её качество
+                        </p>
+                        <a href="{% url "production" %}" class="nLink aboutBodyContentLink transitionLink">
+                            Ознакомиться с производством
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="docsHeader">
+                <h2 class="docsHeaderH">
+                    ДОКУМЕНТЫ
+                </h2>
+            </div>
+            <div class="docsBody">
+                <div class="docsBodyContainer">
+                    <a href="{% static "docs/svidetelstvo-o-gosregistratsii.jpg" %}" class="docsLink transitionLink">
+                        <div class="docsDiv">
+                            <img src="{% static "img/svidetelstvo-o-gosregistratsii.jpg" %}" width="90%">
+                        </div>
+                        <p class="docsP">Свидетельство о регистрации</p>
+                    </a>
+                    <a href="{% static "docs/svidetelstvo-o-postanovke-na-uchet.jpg" %}" class="docsLink transitionLink">
+                        <div class="docsDiv">
+                            <img src="{% static "img/svidetelstvo-o-postanovke-na-uchet.jpg" %}" width="90%">
+                        </div>
+                        <p class="docsP">Свидетельство о поставке на учет</p>
+                    </a>
+                    <a href="{% static "docs/svidetelstvo-ogrn.jpg" %}" class="docsLink transitionLink">
+                        <div class="docsDiv">
+                            <img src="{% static "img/svidetelstvo-ogrn.jpg" %}" width="90%">
+                        </div>
+                        <p class="docsP">Свидетельство о ЕРГН</p>
+                    </a>
+                </div>
+            </div>
+            <div class="collapse" id="collapseExample">
+                <div>
+                    <div class="docsBodyContainer">
+                        <a href="{% static "docs/reshenie o naznachenii direktora.jpg" %}" class="docsLink transitionLink">
+                            <div class="docsDiv">
+                                <img src="{% static "img/reshenie o naznachenii direktora.jpg" %}" width="90%">
+                            </div>
+                            <p class="docsP">Решение о назначении директора</p>
+                        </a>
+                        <a href="{% static "docs/iso_iso-9001-s-100622.PDF" %}" class="docsLink transitionLink">
+                            <div class="docsDiv">
+                                <img src="{% static "img/iso.png" %}" width="90%">
+                            </div>
+                            <p class="docsP">Сертификат менеджмента (ИСО 9001)</p>
+                        </a>
+                        <a href="{% static "docs/Ustav.pdf" %}" class="docsLink transitionLink">
+                            <div class="docsDiv">
+                                <img src="{% static "img/ustav.jpg" %}" width="90%">
+                            </div>
+                            <p class="docsP">Устав</p>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="docsBodyContainer">
+                        <a href="{% static "docs/Vipiska.pdf" %}" class="docsLink transitionLink">
+                            <div class="docsDiv">
+                                <img src="{% static "img/vipiska.jpg" %}" width="90%">
+                            </div>
+                            <p class="docsP">Выписка из ЕГРЮЛ</p>
+                        </a>
+                        <a href="{% static "docs/KodStat.pdf" %}" class="docsLink transitionLink">
+                            <div class="docsDiv">
+                                <img src="{% static "img/kodStat.jpg" %}" width="90%">
+                            </div>
+                            <p class="docsP">Коды статистики</p>
+                        </a>
+                        {% comment %} <a href="{% static "docs/tsentr-oyl-karta-partnera-2021.pdf" %}" class="docsLink transitionLink">
+                            <div class="docsDiv">
+                                <img src="{% static "img/rekviziti.svg" %}" width="90%">
+                            </div>
+                            <p class="docsP">Реквизиты</p>
+                        </a> {% endcomment %}
+                    </div>
+                </div>
+                <div>
+                    <div class="docsBodyContainerEnd">
+                        <a href="{% static "docs/lider.pdf" %}" class="docsLink transitionLink">
+                            <div class="docsDiv">
+                                <img src="{% static "img/lider.png" %}" width="90%">
+                            </div>
+                            <p class="docsP">Лидер отрасли 2023</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="docsFooter">
+                <a class="nLink docsFooterLink" href="#collapseExample" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Ознакомиться с документами
+                </a>
+            </div>
+        </div>
+        <div class="partnerContainer">
+            <div class="partnerHeader">
+                <h2 class="partnerHeaderH">
+                    ПАРТНЕРЫ
+                </h2>
+            </div>
+            <div class="partnerBody">
+                <div class="partnerLogo1">
+                    <img src="{% static "img/expertOil.png" %}" class="partnerLogoImg">
+                </div>
+                <div class="partnerLogo2">
+                    <img src="{% static "img/oilDgrease.png" %}" class="partnerLogoImg">
+                </div>
+                <div class="partnerLogo2">
+                    <img src="{% static "img/volgOil.png" %}" class="partnerLogoImg">
+                </div>
+            </div>
+        </div>
+        <div class="contactImg">
+            <div class="contactImgContainer">
+                <div class="col-lg-5 col-sm-12 contactImgContent">
+                    <h2 class="contactImgHeader">
+                        Контакты
+                    </h2>
+                    <div class="contactImgBody">
+                        <div class="contactImgBodyText">
+                            <h3 class="contactImgBodyH">
+                                Менеджер отдела продаж
+                            </h3>
+                            <p class="contactImgBodyP">
+                                Егор Сташков<br>
+                                evc1@mail.ru
+                            </p>
+                        </div>
+                        <div class="contactImgBodyText">
+                            <h3 class="contactImgBodyH">
+                                Адрес
+                            </h3>
+                            <p class="contactImgBodyP">
+                                Свердловская область<br>
+                                г. Полевской, с. Курганово, стр. 2 Лит. 6<br>
+                                623376
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contactImgBodyLinks">
+                        <a class="nLink contactImgBodyLink transitionLink" href="{% url "map" %}">
+                            Ознакомиться с картой
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-12 contactImgContent">
+                    <h2 class="feedbackImgHeader">
+                        Обратная связь
+                    </h2>
+                    {% include 'contact.html' with form=form %}
+                </div>
+            </div>
+        </div>
+        <div class="footerContainer">
+            <div class="footerBody">
+                <div class="footerBodyCompany">
+                    <p class="footerBodyCompanyCopy">© 2024 ООО “Центр-Ойл”<br>
+                        Продажа пластичных смазок<br>
+                        Все права защищены
+                    </p>
+                    <p class="footerBodyCompanyTime">
+                        Время работы:<br>
+                        пн-пт с 9:00 до 17:00
+                    </p>
+                    <p class="footerBodyCompanyMail">
+                        evc1@mail.ru<br>
+                    </p>
+                </div>
+                <div class="footerBodyNav">
+                    <a href="{% url "catalog" %}" class="footerBodyNavMainLink transitionLink">Каталог</a>
+                    <a href="{% url "production" %}" class="footerBodyNavLink transitionLink">Производство</a>
+                    <a href="{% url "directory" %}" class="footerBodyNavLink transitionLink">О смазках</a>
+                    <a href="{% url "map" %}" class="footerBodyNavMainLink2 transitionLink">Как проехать</a>
+                </div>
+                <div class="footerBodyDocs">
+                    <a href="{% url "privacy" %}" class="footerBodyDoscMain transitionLink">Политика конфиденциальности</a>
+                    <a href="{% static "docs/pricelist.xls" %}" class="footerBodyDocsPrimary">Перечень пластичных смазок</a>
+                </div>
+                <div>
+                    <a href="https://v0lmer.xyz" class="footerBodyMade transitionLink">Made by: V0lmer</a>
+                </div>
+            </div>
+            <div class="footerBodyNotice">
+                <p class="footerBodyNoticeText">
+                    Обращаем Ваше внимание на то, что данный интернет-сайт 
+                    носит исключительно информационный характер и ни при 
+                    каких условиях информационные материалы и цены, размещенные 
+                    на сайте, не являются публичной офертой, определяемой 
+                    положениями Статьи 437 Гражданского кодекса РФ
+                </p>
+            </div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
+<script>
+    window.addEventListener('pageshow', function() {
+        const transitionContainer = document.querySelector('.transitionContainer');
+        transitionContainer.classList.remove('active');
+        sessionStorage.removeItem('transitionActive');
+    });
+
+    document.querySelectorAll('.transitionLink').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const transitionContainer = document.querySelector('.transitionContainer');
+            transitionContainer.classList.add('active');
+            
+            const linkHref = event.currentTarget.href;
+            
+            sessionStorage.setItem('transitionActive', 'true');
+            
+            setTimeout(function() {
+                window.location.href = linkHref;
+            }, 1000);
+        });
+    });
+</script>
+</body>
+
+</html>

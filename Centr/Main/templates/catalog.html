@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр-Ойл | Каталог</title>
+    <link rel="stylesheet" href="{% static "css/bootstrap/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/directory.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/tt-travels-next-trl" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="{% static "img/logoIcon32.png" %}" rel="shortcut icon" type="image/x-icon">
+    <link href="{% static "img/logoIcon256.png" %}" rel="apple-touch-icon">
+    <script src="{% static "js/bootstrap/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootstrap/popper.min.js" %}"></script>
+    <script src="https://kit.fontawesome.com/10bf1f9c8a.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            document.querySelector('html').classList.add('loaded');
+          };
+    </script>
+</head>
+
+<body>
+    <div class="loaderContainer">
+        <img class="loaderCircle" src="{% static "img/loaderCircle.svg" %}">
+        <img class="loaderLogo" src="{% static "img/loaderLogo.png" %}">
+    </div>
+    <div class="transitionContainer"></div>
+    <nav class="navbar sticky-top">
+        <div class="container-fluid">
+            <div class="navbarContent">
+                <a href="{% url "home" %}" class="navbar-brand navLogo transitionLink"><img src="{% static "img/logo.png" %}"></a>
+                <a href="{% url "catalog" %}" class="nav-link nLink navLinks transitionLink">Каталог</a>
+                <a href="{% url "production" %}" class="nav-link nLink nLinks transitionLink">Производство</a>
+                <a href="{% url "directory" %}" class="nav-link nLink nLinks transitionLink">О смазках</a>
+            </div>
+            <div>
+                <a href="{% url "map" %}" class="nav-link nLink nMap transitionLink">Как проехать</a>
+            </div>
+        </div>
+    </nav>
+    <div class="mainProdText catalogSlogan">
+        <h2 class="catalogSloganH">ПРОДУКЦИЯ</h2>
+        <p class="catalogSloganP">23</p>
+    </div>
+    <div class="catalogProdsContainer">
+        <div class="catalogProdsContent">
+            <div class="catalogProdsCards">
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#autoCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Автомобильные смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">2</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="autoCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/auto/1" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">№ 158<br>
+                                    Автомобильная<br>
+                                    ТУ 38.101320-77</p>
+                                </div>
+                            </a>
+                            <a class="cardProd transitionLink" href="/catalog/auto/2">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Шрус-4<br>
+                                    Автомобильная<br>
+                                    ТУ 19.20.29-008-62027624-2023</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalogCategoryArticle">
+                            <a class="nLink catalogCategoryLink transitionLink" href="{% url "auto" %}">
+                                Подробно про автомобильные смазки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#aviaCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Авиационные смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">7</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="aviaCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/aviation/108" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ОСТ</p>
+                                    <p class="catalogCategoryText">№ 8<br>
+                                    Авиационная<br>
+                                    ОСТ 95.510-77</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/aviation/3" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">№ 9<br>
+                                    Авиационная<br>
+                                    ТУ 38.001116-84</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/aviation/4" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП-286М Эра<br>
+                                    Авиационная<br>
+                                    ТУ 38.101950-00</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/aviation/115" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 254 (Атланта)<br>
+                                    Авиационная<br>
+                                    ТУ 38.1011048-85</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/aviation/5" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">НК-50<br>
+                                    Авиационная<br>
+                                    ТУ 38.1011219-95</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/aviation/105" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Свинцоль-1<br>
+                                    Авиационная<br>
+                                    ТУ 38.101577-76</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/aviation/106" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Свинцоль-2<br>
+                                    Авиационная<br>
+                                    ТУ 38.101577-76</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalogCategoryArticle">
+                            <a class="nLink catalogCategoryLink transitionLink" href="{% url "aviation" %}">
+                                Подробно про авиационные смазки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#railwayCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Железнодорожные смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">10</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="railwayCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/railway/6" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЖРО<br>
+                                    Железнодорожная<br>
+                                    ТУ 32 ЦТ 520-83</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/railway/7" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ЛЗ-ЦНИИ<br>
+                                    Железнодорожная<br>
+                                    ГОСТ 19791-74</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/railway/8" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Буксол-М<br>
+                                    Железнодорожная<br>
+                                    ТУ 0254-107-62027624-2015</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/railway/9" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЖТ-79Л<br>
+                                    Железнодорожная<br>
+                                    ТУ 32 ЦТ 1176-83</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/railway/10" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ПУМА-МЛ<br>
+                                    Железнодорожная<br>
+                                    ТУ 19.20.29-005-62027624-2022</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/railway/11" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ПУМА-МР<br>
+                                    Железнодорожная<br>
+                                    ТУ 19.20.29-005-62027624-2022</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/railway/12" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ПУМА-МГ<br>
+                                    Железнодорожная<br>
+                                    ТУ 19.20.29-005-62027624-2022</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/railway/98" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЖТКЗ-65<br>
+                                    Железнодорожная<br>
+                                    ТУ 32 ЦТ 546-83</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/railway/99" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">СПЛ<br>
+                                    Железнодорожная<br>
+                                    ТУ 32 ЦТ 2186-93</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/railway/102" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЛЗ-31Т<br>
+                                    Железнодорожная<br>
+                                    ТУ 301-04-005-90</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#industrialCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Индустриальные смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">7</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="industrialCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/industrial/13" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ИП-1 (З,-Л)<br>
+                                    Индустриальная<br>
+                                    ТУ 38.101820-80 </p>
+                                </div>
+                            </a>
+                            <a href="/catalog/industrial/14" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ИП-1 (З,-Л) Люкс<br>
+                                    Индустриальная<br>
+                                    ТУ 38.101820-80 </p>
+                                </div>
+                            </a>
+                            <a href="/catalog/industrial/15" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЛКС-М<br>
+                                    Индустриальная<br>
+                                    ТУ 38.1011107-87</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/industrial/16" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Униол-2М/2<br>
+                                    Индустриальная<br>
+                                    ТУ 38.5901243-92</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/industrial/17" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 273<br>
+                                    Индустриальная<br>
+                                    ТУ 38.101476-74</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/industrial/127" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 505 (СТАРТ)<br>
+                                    Индустриальная<br>
+                                    ТУ 38.101986-84</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/industrial/18" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЛС-1П<br>
+                                    Индустриальная<br>
+                                    ТУ 38 УССР 201145-77</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#cableCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Канатные смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">3</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="cableCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/cable/19" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Торсиол-35<br>
+                                    Канатная<br>
+                                    ТУ 38 УССР 2-01-214-80</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/cable/20" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Торсиол-55<br>
+                                    Канатная<br>
+                                    ГОСТ 20458-89</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/cable/21" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">39У<br>
+                                    Канатная<br>
+                                    ТУ 38 УССР 201335-80</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalogCategoryArticle">
+                            <a class="nLink catalogCategoryLink transitionLink" href="{% url "cable" %}">
+                                Подробно про канатные смазки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#conservationCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Консервационные смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">3</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="conservationCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/conservation/22" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ПВК<br>
+                                    Консервационная<br>
+                                    ГОСТ 19537-83</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/conservation/23" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ВТВ-1<br>
+                                    Консервационная<br>
+                                    ТУ 38.101180-76</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/conservation/24" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЗЭС<br>
+                                    Консервационная<br>
+                                    ТУ 38.101474-74</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalogCategoryArticle">
+                            <a class="nLink catalogCategoryLink transitionLink" href="{% url "conservation" %}">
+                                Подробно про консервационные смазки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#oilCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Масла</p>
+                        <p class="catalogProdsCategoryHeaderP2">6</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="oilCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/oil/25" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Нигрол<br>
+                                    Масла<br>
+                                    ТУ 38.101529-01</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/oil/26" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">132-08<br>
+                                    Масла<br>
+                                    ГОСТ 18375-73</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/oil/27" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">132-07<br>
+                                    Масла<br>
+                                    ТУ 06-02897-78</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/oil/28" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">132-19<br>
+                                    Масла<br>
+                                    ТУ 06-02897-78</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/oil/29" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">132-20<br>
+                                    Масла<br>
+                                    ТУ 06-02897-78</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/oil/30" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">132-21<br>
+                                    Масла<br>
+                                    ТУ 06-02897-78</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#multiCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Многоцелевые смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">16</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="multiCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/multi/31" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Фиол-1<br>
+                                    Многоцелевая<br>
+                                    ТУ 38 УССР 201247-80</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/multi/32" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Фиол-2<br>
+                                    Многоцелевая<br>
+                                    ТУ 38 УССР 201247-80</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/multi/33" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Литол-24<br>
+                                    Многоцелевая<br>
+                                    ГОСТ 21150-2017</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/multi/34" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Литол-24 Люкс<br>
+                                    Многоцелевая<br>
+                                    ГОСТ 21150-2017</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/35" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЕР-00<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/36" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЕР-0<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/37" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЕР-1<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/38" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/39" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЕР-3<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/40" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">MOLY ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/41" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Blue ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/42" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арктик ЕР-0<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/43" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арктик ЕР-1<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/44" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арктик ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/45" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арктик MOLY ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/46" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арктик Blue ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalogCategoryArticle">
+                            <a class="nLink catalogCategoryLink transitionLink" href="{% url "multi" %}">
+                                Подробно про многоцелевые смазки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#lowtempCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Низкотемпературные смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">6</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="lowtempCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/lithium/47" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Лита<br>
+                                    Литиевая<br>
+                                    ТУ 38.1011308-90</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lowtemp/48" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ГОИ-54П<br>
+                                    Низкотемпературная<br>
+                                    ГОСТ 3276-89</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lowtemp/97" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Циатим-202<br>
+                                    Низкотемпературная<br>
+                                    ГОСТ 11110-75</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lowtemp/49" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Циатим-203<br>
+                                    Низкотемпературная<br>
+                                    ГОСТ 8773-2022</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lowtemp/50" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Зимол<br>
+                                    Низкотемпературная<br>
+                                    ТУ 38 УССР 201285-82</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lowtemp/117" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 263<br>
+                                    Низкотемпературная<br>
+                                    ГОСТ 16862-71</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalogCategoryArticle">
+                            <a class="nLink catalogCategoryLink transitionLink" href="{% url "lowtemp" %}">
+                                Подробно про низкотемпературные смазки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#instrumentationCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Приборные смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">2</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="instrumentationCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/instrumentation/51" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ОКБ-122-7<br>
+                                    Приборная<br>
+                                    ГОСТ 18179-72</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/instrumentation/52" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Циатим-201<br>
+                                    Приборная<br>
+                                    ГОСТ 6267-2021</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalogCategoryArticle">
+                            <a class="nLink catalogCategoryLink transitionLink" href="{% url "instrumentation" %}">
+                                Подробно про приборные смазки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#runningCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Приработочные пасты</p>
+                        <p class="catalogProdsCategoryHeaderP2">4</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="runningCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/running/53" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 225<br>
+                                    Приработочная паста<br>
+                                    ГОСТ 19782-74</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/running/54" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 232 (графит)<br>
+                                    Приработочная паста<br>
+                                    ГОСТ 14068-79</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/running/55" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 232 (молибден)<br>
+                                    Приработочная паста<br>
+                                    ГОСТ 14068-79</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/running/56" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Лимол<br>
+                                    Приработочная паста<br>
+                                    ТУ 38 УССР 201146-80</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#heavingCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Противопучинистые Смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">1</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="heavingCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/heaving/100" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">БАМ-4<br>
+                                    Противопучинистая<br>
+                                    ТУ 38.101682-88</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalogProdsContent">
+            <div class="catalogProdsCards">
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#gearboxCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Редукторные смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">5</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="gearboxCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/gearbox/57" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Циатим-208<br>
+                                    Редукторная<br>
+                                    ГОСТ 16422-79</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/gearbox/58" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">СТП-З<br>
+                                    Редукторная<br>
+                                    ТУ 38 УССР 201232-81</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/gearbox/59" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">СТП-Л<br>
+                                    Редукторная<br>
+                                    ТУ 38 УССР 201232-81</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/gearbox/60" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ОС-(З, Л)<br>
+                                    Редукторная<br>
+                                    ТУ 32 ЦТ 551-84</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/gearbox/61" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ОСП-(З, Л)<br>
+                                    Редукторная<br>
+                                    ТУ 38.401-58-81-94</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalogCategoryArticle">
+                            <a class="nLink catalogCategoryLink transitionLink" href="{% url "gearbox" %}">
+                                Подробно про редукторные смазки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#generalCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Смазки общего назначения</p>
+                        <p class="catalogProdsCategoryHeaderP2">4</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="generalCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/general/62" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Солидол-Ж<br>
+                                    Общего назначения<br>
+                                    ГОСТ 1033-79</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/general/63" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Солидол-Ж Люкс<br>
+                                    Общего назначения<br>
+                                    ГОСТ 1033-79</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/general/64" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Солидол-С<br>
+                                    Общего назначения<br>
+                                    ГОСТ 4366-76</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/general/65" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Графитная (УССА)<br>
+                                    Общего назначения<br>
+                                    ГОСТ 3333-80</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#elevatedCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Смазки для повышенных температур</p>
+                        <p class="catalogProdsCategoryHeaderP2">8</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="elevatedCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/elevated/66" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Консталин-1<br>
+                                    Для повышенных температур<br>
+                                    ГОСТ 1957-73</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/elevated/67" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">1-13<br>
+                                    Для повышенных температур<br>
+                                    ТУ 38.5901257-90</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/elevated/111" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 220<br>
+                                    Для повышенных температур<br>
+                                    ТУ 38.101475-74</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/elevated/113" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 233<br>
+                                    Для повышенных температур<br>
+                                    ТУ 38.101687-77</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/elevated/114" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 235<br>
+                                    Для повышенных температур<br>
+                                    ТУ 38.101297-78</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/elevated/116" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 261 (Сапфир)<br>
+                                    Для повышенных температур<br>
+                                    ТУ 38.1011051-87</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/elevated/118" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 275<br>
+                                    Для повышенных температур<br>
+                                    ТУ 38.101891-81 изм. 1, 2, 3</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/elevated/126" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 501<br>
+                                    Для повышенных температур<br>
+                                    ТУ 38.101918-82</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#electricalCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Смазки для электрических машин</p>
+                        <p class="catalogProdsCategoryHeaderP2">1</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="electricalCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/electrical/68" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 242<br>
+                                    Для электрических машин<br>
+                                    ГОСТ 20421-75</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#reinforcingCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Смазки уплотнительные арматурные</p>
+                        <p class="catalogProdsCategoryHeaderP2">5</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="reinforcingCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/reinforcing/69" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арматол-60<br>
+                                    Уплотнительная арматурная<br>
+                                    ТУ 19.20.29-009-62027624-2023</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/reinforcing/70" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арматол-238<br>
+                                    Уплотнительная арматурная<br>
+                                    ТУ 19.20.29-009-62027624-2023</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/reinforcing/71" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЛЗ-162<br>
+                                    Уплотнительная арматурная<br>
+                                    ТУ 38.101315-77</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/reinforcing/109" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">САГ Тип 1<br>
+                                    Уплотнительная арматурная<br>
+                                    ТУ 38.401-58-289-01</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/reinforcing/110" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">САГ Тип 2<br>
+                                    Уплотнительная арматурная<br>
+                                    ТУ 38.401-58-289-01</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalogCategoryArticle">
+                            <a class="nLink catalogCategoryLink transitionLink" href="{% url "reinforcing" %}">
+                                Подробно про смазки уплотнительные арматурные смазки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#threadedCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Смазки уплотнительные резьбовые</p>
+                        <p class="catalogProdsCategoryHeaderP2">8</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="threadedCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/threaded/72" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Р-402<br>
+                                    Уплотнительная резьбовая<br>
+                                    ТУ 301-04-020-92</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/threaded/73" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Р-113<br>
+                                    Уплотнительная резьбовая<br>
+                                    ТУ 301-04-020-92</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/threaded/74" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Р-416<br>
+                                    Уплотнительная резьбовая<br>
+                                    ТУ 301-04-020-92</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/threaded/75" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Резьбол Б<br>
+                                    Уплотнительная резьбовая<br>
+                                    ТУ 38.30108-88</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/threaded/76" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Для газовых кранов<br>
+                                    Уплотнительная резьбовая<br>
+                                    ТУ 38.101316-78</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/threaded/101" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Кранол<br>
+                                    Уплотнительная резьбовая<br>
+                                    ТУ У 13738828.001-97</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/threaded/107" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Резол<br>
+                                    Уплотнительная резьбовая<br>
+                                    ТУ 38.1011121-87</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/threaded/123" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 292<br>
+                                    Уплотнительная резьбовая<br>
+                                    ТУ 38.101472-74</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#resistantCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Термостойкие смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">12</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="resistantCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/resistant/112" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 231<br>
+                                    Термостойкая<br>
+                                    ТУ 38.1011220-89</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/resistant/77" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 219<br>
+                                    Термостойкая<br>
+                                    ТУ 38.101471-74</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/resistant/78" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 210<br>
+                                    Термостойкая<br>
+                                    ТУ 38.101275-72</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/resistant/79" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 207<br>
+                                    Термостойкая<br>
+                                    ГОСТ 19774-74</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/resistant/80" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 246<br>
+                                    Термостойкая<br>
+                                    ГОСТ 18852-73</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/resistant/122" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 284 (Аметист)<br>
+                                    Термостойкая<br>
+                                    ТУ 38.1011029-2009</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/resistant/81" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Циатим-221<br>
+                                    Термостойкая<br>
+                                    ГОСТ 9433-2021</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/resistant/82" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Циатим-221-F<br>
+                                    Термостойкая<br>
+                                    ГОСТ 9433-2021</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/resistant/83" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Графитол<br>
+                                    Термостойкая<br>
+                                    ТУ 38 УССР 201172-77</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/resistant/84" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ПФМС-4С<br>
+                                    Термостойкая<br>
+                                    ТУ 6-02-917-79</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/resistant/103" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Аэрол<br>
+                                    Термостойкая<br>
+                                    ТУ 38 УССР 201171-79</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/resistant/104" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ГТШ<br>
+                                    Термостойкая<br>
+                                    ТУ 0254-084-00284530-99</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#thermalCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Термопасты</p>
+                        <p class="catalogProdsCategoryHeaderP2">1</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="thermalCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/thermal/85" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">КПД<br>
+                                    Термопаста<br>
+                                    ТУ 6-02-5-009-92</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#conductiveCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Токопроводящие смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">6</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="conductiveCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/conductive/86" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Суперконтакт<br>
+                                    Токопроводящая<br>
+                                    ТУ 19.20.29-003-62027624-2019</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/conductive/87" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Экстраконтакт<br>
+                                    Токопроводящая<br>
+                                    ТУ 19.20.29-004-62027624-2019</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/conductive/88" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЭПС 90<br>
+                                    Токопроводящая<br>
+                                    ТУ 19.20.29-001-62027624-2021</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/conductive/89" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЭПС 98<br>
+                                    Токопроводящая<br>
+                                    ТУ 19.20.29-001-62027624-2021</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/conductive/90" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЭПС 150<br>
+                                    Токопроводящая<br>
+                                    ТУ 19.20.29-001-62027624-2021</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/conductive/91" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЭПС 250<br>
+                                    Токопроводящая<br>
+                                    ТУ 19.20.29-001-62027624-2021</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalogCategoryArticle">
+                            <a class="nLink catalogCategoryLink transitionLink" href="{% url "conductive" %}">
+                                Подробно про токопроводящие смазки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#lithiumCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Литиевые смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">16</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="lithiumCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/auto/1" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">№ 158<br>
+                                    Автомобильная<br>
+                                    ТУ 38.101320-77</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/47" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Лита<br>
+                                    Литиевая<br>
+                                    ТУ 38.1011308-90</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/multi/33" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Литол-24<br>
+                                    Многоцелевая<br>
+                                    ГОСТ 21150-2017</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/multi/34" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Литол-24 Люкс<br>
+                                    Многоцелевая<br>
+                                    ГОСТ 21150-2017</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/35" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЕР-00<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/36" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЕР-0<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/37" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЕР-1<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/38" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/39" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ЕР-3<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/40" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">MOLY ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/41" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Blue ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/42" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арктик ЕР-0<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/43" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арктик ЕР-1<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/44" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арктик ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/45" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арктик MOLY ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/lithium/46" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Арктик Blue ЕР-2<br>
+                                    Литиевая<br>
+                                    ТУ 0254-001-62027624-2014</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalogCategoryArticle">
+                            <a class="nLink catalogCategoryLink transitionLink" href="{% url "lithium" %}">
+                                Подробно про литиевые смазки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogProdsCardsCategory">
+                    <a class="collapseProd collapsed" href="#chemistryCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <p class="catalogProdsCategoryHeaderP1">Химически стойкие смазки</p>
+                        <p class="catalogProdsCategoryHeaderP2">10</p>
+                    </a>
+                    <div class="collapse catalogProdsCategoryBody" id="chemistryCollapse">
+                        <div class="catalogProdsCategoryBodyContainer">
+                            <a href="/catalog/chemistry/125" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 295<br>
+                                    Химически стойкая<br>
+                                    ТУ 38.101751-78</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/chemistry/124" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 294<br>
+                                    Химически стойкая<br>
+                                    ТУ 38.101273-72</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/chemistry/92" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 283<br>
+                                    Химически стойкая<br>
+                                    ТУ 38.1011281-89</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/chemistry/93" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 282<br>
+                                    Химически стойкая<br>
+                                    ТУ 38.1011261-89</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/chemistry/121" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 280<br>
+                                    Химически стойкая<br>
+                                    ТУ 38.101818-88</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/chemistry/120" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 279<br>
+                                    Химически стойкая<br>
+                                    ГОСТ 14296-78</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/chemistry/119" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">ВНИИ НП 276<br>
+                                    Химически стойкая<br>
+                                    ТУ 38.1011062-86</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/chemistry/94" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ГОСТ</p>
+                                    <p class="catalogCategoryText">Циатим-205<br>
+                                    Химически стойкая<br>
+                                    ГОСТ 8551-2021</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/chemistry/95" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">СК-2-06<br>
+                                    Химически стойкая<br>
+                                    ТУ 6-02-786-84</p>
+                                </div>
+                            </a>
+                            <a href="/catalog/chemistry/96" class="cardProd transitionLink">
+                                <div class="cardProdImg">
+                                    <img src="{% static "img/jb.webp" %}" width="80%">
+                                </div>
+                                <div class="catalogCategoryInfo">
+                                    <p class="catalogCategoryName">ПРОДУКТ<br>
+                                    КАТЕГОРИЯ<br>
+                                    ТУ</p>
+                                    <p class="catalogCategoryText">Криогель<br>
+                                    Химически стойкая<br>
+                                    ТУ 38.101924-82</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tipsHeader">
+        <p class="tipsHeaderP">
+            НЕ НАШЛИ НУЖНЫЙ ВАМ ТОВАР?
+        </p>
+    </div>
+    <p class="tipsBody">Заполните форму 
+        обратной связи или напишите нашему менеджеру отдела продаж. 
+        Мы согласуем с производством возможность ее изготовления 
+        специально для Вас</p>
+    <div class="contactContainer">
+        <div class="col-lg-5 col-sm-12 contactContent">
+            <h2 class="contactHeader">
+                Контакты
+            </h2>
+            <div class="contactBody">
+                <div class="contactBodyText">
+                    <h3 class="contactBodyH">
+                        Менеджер отдела продаж
+                    </h3>
+                    <p class="contactBodyP">
+                        Егор Сташков<br>
+                        evc1@mail.ru
+                    </p>
+                </div>
+                <div class="contactBodyText">
+                    <h3 class="contactBodyH">
+                        Адрес
+                    </h3>
+                    <p class="contactBodyP">
+                        Свердловская область<br>
+                        г. Полевской, с. Курганово, стр. 2 Лит. 6<br>
+                        623376
+                    </p>
+                </div>
+            </div>
+            <div class="contactBodyLinks">
+                <a class="nLink contactBodyLink transitionLink" href="{% url "map" %}">
+                    Ознакомиться с картой
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-5 col-sm-12 contactContent">
+            <h2 class="feedbackHeader">
+                Обратная связь
+            </h2>
+            {% include 'contact.html' with form=form %}
+        </div>
+    </div>
+    <div class="footerContainer">
+        <div class="footerBody">
+            <div class="footerBodyCompany">
+                <p class="footerBodyCompanyCopy">© 2024 ООО “Центр-Ойл”<br>
+                    Продажа пластичных смазок<br>
+                    Все права защищены
+                </p>
+                <p class="footerBodyCompanyTime">
+                    Время работы:<br>
+                    пн-пт с 9:00 до 17:00
+                </p>
+                <p class="footerBodyCompanyMail">
+                    evc1@mail.ru<br>
+                </p>
+            </div>
+            <div class="footerBodyNav">
+                <a href="{% url "catalog" %}" class="footerBodyNavMainLink transitionLink">Каталог</a>
+                <a href="{% url "production" %}" class="footerBodyNavLink transitionLink">Производство</a>
+                <a href="{% url "directory" %}" class="footerBodyNavLink transitionLink">О смазках</a>
+                <a href="{% url "map" %}" class="footerBodyNavMainLink2 transitionLink">Как проехать</a>
+            </div>
+            <div class="footerBodyDocs">
+                <a href="{% url "privacy" %}" class="footerBodyDoscMain transitionLink">Политика конфиденциальности</a>
+                <a href="{% static "docs/pricelist.xls" %}" class="footerBodyDocsPrimary">Перечень пластичных смазок</a>
+            </div>
+            <div>
+                <a href="https://v0lmer.xyz" class="footerBodyMade transitionLink">Made by: V0lmer</a>
+            </div>
+        </div>
+        <div class="footerBodyNotice">
+            <p class="footerBodyNoticeText">
+                Обращаем Ваше внимание на то, что данный интернет-сайт 
+                носит исключительно информационный характер и ни при 
+                каких условиях информационные материалы и цены, размещенные 
+                на сайте, не являются публичной офертой, определяемой 
+                положениями Статьи 437 Гражданского кодекса РФ
+            </p>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
+<script>
+    window.addEventListener('pageshow', function() {
+        const transitionContainer = document.querySelector('.transitionContainer');
+        transitionContainer.classList.remove('active');
+        sessionStorage.removeItem('transitionActive');
+    });
+
+    document.querySelectorAll('.transitionLink').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const transitionContainer = document.querySelector('.transitionContainer');
+            transitionContainer.classList.add('active');
+            
+            const linkHref = event.currentTarget.href;
+            
+            sessionStorage.setItem('transitionActive', 'true');
+            
+            setTimeout(function() {
+                window.location.href = linkHref;
+            }, 1000);
+        });
+    });
+</script>
+
+</body>
+
+</html>

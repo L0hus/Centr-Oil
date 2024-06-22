@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Консервационные смазки</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/directory.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/tt-travels-next-trl" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="{% static "img/logoIcon32.png" %}" rel="shortcut icon" type="image/x-icon">
+    <link href="{% static "img/logoIcon256.png" %}" rel="apple-touch-icon">
+    <script src="{% static "js/bootstrap/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootstrap/popper.min.js" %}"></script>
+    <script src="https://kit.fontawesome.com/10bf1f9c8a.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            document.querySelector('html').classList.add('loaded');
+          };
+    </script>
+</head>
+
+<body>
+    <div class="loaderContainer">
+        <img class="loaderCircle" src="{% static "img/loaderCircle.svg" %}">
+        <img class="loaderLogo" src="{% static "img/loaderLogo.png" %}">
+    </div>
+    <div class="transitionContainer"></div>
+    <nav class="navbar sticky-top">
+        <div class="container-fluid">
+            <div class="navbarContent">
+                <a href="{% url "home" %}" class="navbar-brand navLogo transitionLink"><img src="{% static "img/logo.png" %}"></a>
+                <a href="{% url "catalog" %}" class="nav-link nLink navLinks transitionLink">Каталог</a>
+                <a href="{% url "production" %}" class="nav-link nLink nLinks transitionLink">Производство</a>
+                <a href="{% url "directory" %}" class="nav-link nLink nLinks transitionLink">О смазках</a>
+            </div>
+            <div>
+                <a href="{% url "map" %}" class="nav-link nLink nMap transitionLink">Как проехать</a>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="tipsHeader">
+            <p class="tipsHeaderP">
+                КОНСЕРВАЦИОННЫЕ СМАЗКИ
+            </p>
+        </div>
+        <div class="articlesTop">
+            <p class="articlesText">Металлы, из которых состоит основная часть механизмов 
+                и агрегатов, подвержены влиянию окружающей среды. Даже во время 
+                хранения в обычной атмосфере под навесом (без прямого попадания 
+                осадков) техника может ржаветь. Металлические изделия под 
+                воздействием кислорода, влаги, лучистой энергии и других факторов 
+                окружающей среды подвергаются коррозии. При этом разрушение 
+                затрагивает не просто поверхность, в негодность приходят 
+                дорогостоящие металлические изделия, стоимость которых нередко в 
+                сотни и тысячи раз выше цены самого металла. Чтобы предотвратить 
+                коррозию, используются специальные грунтовки, полимерные покрытия, 
+                покраска, нанесение слоя металлов, которые не подвержены окислению. 
+                Однако этих мер обычно недостаточно. Всегда остаются незащищенные поверхности – по 
+                техническим причинам их нельзя покрасить или оцинковать. Для покрытия наиболее 
+                уязвимых компонентов используются консервационные смазки</p>
+        </div>
+        <div class="articlesProduct">
+            <p class="articlesProductHeader">Предлагаем к поставке консервационные смазки</p>
+            <div class="articleProdBodyContainer">
+                <div class="prodCardBody">
+                    <a href="/catalog/conservation/22" class="cardProd transitionLink">
+                        <div class="cardProdImg">
+                            <img src="{% static "img/jb.webp" %}" width="80%">
+                        </div>
+                        <div class="catalogCategoryInfo">
+                            <p class="catalogCategoryName" style="color: white">ПРОДУКТ<br>
+                            КАТЕГОРИЯ<br>
+                            ГОСТ</p>
+                            <p class="catalogCategoryText" style="color: white">ПВК<br>
+                            Консервационная<br>
+                            ГОСТ 19537-83</p>
+                        </div>
+                    </a>
+                    <a href="/catalog/conservation/23" class="cardProd transitionLink">
+                        <div class="cardProdImg">
+                            <img src="{% static "img/jb.webp" %}" width="80%">
+                        </div>
+                        <div class="catalogCategoryInfo">
+                            <p class="catalogCategoryName" style="color: white">ПРОДУКТ<br>
+                            КАТЕГОРИЯ<br>
+                            ГОСТ</p>
+                            <p class="catalogCategoryText" style="color: white">ВТВ-1<br>
+                            Консервационная<br>
+                            ТУ 38.101180-76</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="prodCardBody">
+                    <a href="/catalog/conservation/24" class="cardProd transitionLink">
+                        <div class="cardProdImg">
+                            <img src="{% static "img/jb.webp" %}" width="80%">
+                        </div>
+                        <div class="catalogCategoryInfo">
+                            <p class="catalogCategoryName" style="color: white">ПРОДУКТ<br>
+                            КАТЕГОРИЯ<br>
+                            ТУ</p>
+                            <p class="catalogCategoryText" style="color: white">ЗЭС<br>
+                            Консервационная<br>
+                            ТУ 38.101474-74</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="prodFooter">
+                <a href="{% url "catalog" %}" class="nLink transitionLink">
+                    Ознакомиться с каталогом
+                </a>
+            </div>
+        </div>
+        <div class="articlesCenter">
+            <p class="articlesText">Для этих целей можно использовать и обычные пластичные составы, но это 
+                нерационально – антифрикционные смазочные материалы обычно дороже. 
+                Поэтому для защиты выпускается отдельная категория составов, на долю 
+                которых приходится до 20 % от общего рынка консистентных смазок. 
+                Часто консервационные составы путают с антифрикционными. Но они кардинально 
+                разные. Задача антифрикционной смазки – продолжительная работа узлов в 
+                условиях реальной эксплуатации, а консервационной – сохранение свойств 
+                деталей во время хранения</p>
+            <b class="articlesText">Особенности изготовления и применения</b>
+            <p class="articlesText">Консервационные смазки представляют собой сочетание твердых загустителей 
+                с жидкой основой. Для их изготовления используются преимущественно 
+                высокоструктурированные загустители, поэтому их добавляют лишь в 
+                незначительных количествах – до 15 %</p>
+            <p class="articlesText">Основная часть всех изготавливаемых в России консервационных смазок 
+                приходится на углеводородные. Уже более 100 лет успешно применяется 
+                вазелин, который представляет собой нефтяное масло, загущенное 
+                церезином и парафином. Сегодня на его основе выпускают углеводородные 
+                смазки вроде технического вазелина. Особое место в линейке занимает 
+                полужидкая алюминиевая ЗЭС, а также электроизоляционные кремнийорганические 
+                вазелины</p>
+            <b class="articlesText">Состав консервационной смазки включает три базовых компонента:</b>
+            <ul class="articlesText">
+                <li class="articlesList">- Основа – жидкая субстанция, обычно используют 
+                    синтетическое либо минеральное масло. В случае приготовления 
+                    особо сложных и дорогих составов основа может быть смешана в
+                     любых пропорциях. Как правило, содержание базового жидкого 
+                     масла достигает 70–90 %</li>
+                <li class="articlesList">- Загуститель. В консервационных смазках его 
+                    содержание может варьироваться от 10 до 15 %. Для получения 
+                    однородного состава недостаточно просто добавить загуститель 
+                    в жидкую основу. Технология подразумевает доведение вещества 
+                    до определенной температуры и применение специальных миксеров. 
+                    В качестве загустителя чаще всего выступают высокомолекулярные 
+                    соли жирных кислот или, проще говоря, мыло. В элитных смазках 
+                    используют твердые углеводороды и неорганические соединения</li>
+                <li>- Присадки. Их добавляют для улучшения характеристик продукта. 
+                    Присадки могут придавать износостойкость деталям в процессе 
+                    работы, предотвращать коррозию, снижать вероятность окисления 
+                    самой смазки, повышать адгезию и снижать силу трения. В качестве 
+                    присадок могут служить тальк, медный порошок, слюда, графит и 
+                    другие компоненты</li>
+            </ul>
+            <p class="articlesText">Такой компонентный состав обеспечивает надежную защиту 
+                металлических изделий, узлов машин и технологичного оборудования от 
+                атмосферной коррозии. Использование консервационных смазок предотвращает 
+                порчу деталей до их ввода в эксплуатацию. Составы обычно применяют 
+                только наружно, поскольку они обладают плотной консистенцией, наносить 
+                их на труднодоступные поверхности сложно. Материал надежно удерживается 
+                на поверхности, не смывается, не стекает под действием собственного 
+                веса, имеет хорошие изоляционные свойства. Для нанесения дополнительный 
+                нагрев не требуется – достаточно использовать лопатку или ветошь. 
+                Перед введением оборудования в эксплуатацию нанесенную консервационную 
+                смазку обычно удаляют</p>
+            <p class="articlesText">Консервационные смазки занимают ведущее место в линейке пластичных составов. 
+                Поскольку они требуются промышленности в больших объемах, их производством 
+                занимается все большее количество предприятий. Сегодня действует 11 
+                технических условий, 6 ГОСТов и 1 отраслевой стандарт на эти смазки. 
+                Наибольшее распространение получили материалы ПВК и технический вазелин</p>
+            <p class="articlesText">Помимо обычных консервационных смазок, для защиты металлических изделий от 
+                коррозии можно применять нерастворимые в воде, коллоидно и химически 
+                стабильные антифрикционные составы. Они обладают низкой испаряемостью 
+                и, соответственно, хорошими защитными характеристиками. Среди таких 
+                антифрикционных смазок можно использовать Солидол и Литол, для консервации 
+                механизмов, которые работают при низких температурах – МС-70, а для 
+                электроприборов – ОКБ-122-7 или ГОИ-54п. При наличии рисков контакта 
+                с морской водой целесообразно использовать смазки АМС</p>
+            <p class="articlesText">Все составы, представленные в нашем каталоге, 
+                соответствуют ГОСТам и ТУ, что подтверждается техническими паспортами</p>
+            <p class="articlesBottom">Мы отгружаем смазочные материалы во все регионы России и страны Таможенного союза. 
+                Также возможен самовывоз со склада готовой продукции. Стоимость зависит 
+                от объема партии, срочности изготовления, марки и состава смазки</p>
+        </div>
+        <div class="contactContainer">
+            <div class="col-lg-5 col-sm-12 contactContent">
+                <h2 class="contactHeader">
+                    Контакты
+                </h2>
+                <div class="contactBody">
+                    <div class="contactBodyText">
+                        <h3 class="contactBodyH">
+                            Менеджер отдела продаж
+                        </h3>
+                        <p class="contactBodyP">
+                            Егор Сташков<br>
+                            evc1@mail.ru
+                        </p>
+                    </div>
+                    <div class="contactBodyText">
+                        <h3 class="contactBodyH">
+                            Адрес
+                        </h3>
+                        <p class="contactBodyP">
+                            Свердловская область<br>
+                            г. Полевской, с. Курганово, стр. 2 Лит. 6<br>
+                            623376
+                        </p>
+                    </div>
+                </div>
+                <div class="contactBodyLinks">
+                    <a class="nLink contactBodyLink transitionLink" href="{% url "map" %}">
+                        Ознакомиться с картой
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12 contactContent">
+                <h2 class="feedbackHeader">
+                    Обратная связь
+                </h2>
+                {% include 'contact.html' with form=form %}
+            </div>
+        </div>
+        <div class="articleFooter" style="width: 95%; margin-left: 2.5%; display: flex; flex-direction: row; justify-content: space-between;">
+            <a href="{% url "cable" %}" class="nLink articleFooterPrev transitionLink"><i class="fa-solid fa-angle-left"></i> Канатные смазки</a>
+            <a href="{% url "directory" %}" class="nLink articleFooterMain transitionLink">О смазках</a>
+            <a href="{% url "multi" %}" class="nLink articleFooterNext transitionLink">Многоцелевые смазки <i class="fa-solid fa-angle-right"></i></a>
+        </div>
+        <div class="footerContainer">
+            <div class="footerBody">
+                <div class="footerBodyCompany">
+                    <p class="footerBodyCompanyCopy">© 2024 ООО “Центр-Ойл”<br>
+                        Продажа пластичных смазок<br>
+                        Все права защищены
+                    </p>
+                    <p class="footerBodyCompanyTime">
+                        Время работы:<br>
+                        пн-пт с 9:00 до 17:00
+                    </p>
+                    <p class="footerBodyCompanyMail">
+                        evc1@mail.ru<br>
+                    </p>
+                </div>
+                <div class="footerBodyNav">
+                    <a href="{% url "catalog" %}" class="footerBodyNavMainLink transitionLink">Каталог</a>
+                    <a href="{% url "production" %}" class="footerBodyNavLink transitionLink">Производство</a>
+                    <a href="{% url "directory" %}" class="footerBodyNavLink transitionLink">О смазках</a>
+                    <a href="{% url "map" %}" class="footerBodyNavMainLink2 transitionLink">Как проехать</a>
+                </div>
+                <div class="footerBodyDocs">
+                    <a href="{% url "privacy" %}" class="footerBodyDoscMain transitionLink">Политика конфиденциальности</a>
+                    <a href="{% static "docs/pricelist.xls" %}" class="footerBodyDocsPrimary">Перечень пластичных смазок</a>
+                </div>
+                <div>
+                    <a href="https://v0lmer.xyz" class="footerBodyMade transitionLink">Made by: V0lmer</a>
+                </div>
+            </div>
+            <div class="footerBodyNotice">
+                <p class="footerBodyNoticeText">
+                    Обращаем Ваше внимание на то, что данный интернет-сайт 
+                    носит исключительно информационный характер и ни при 
+                    каких условиях информационные материалы и цены, размещенные 
+                    на сайте, не являются публичной офертой, определяемой 
+                    положениями Статьи 437 Гражданского кодекса РФ
+                </p>
+            </div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
+<script>
+    window.addEventListener('pageshow', function() {
+        const transitionContainer = document.querySelector('.transitionContainer');
+        transitionContainer.classList.remove('active');
+        sessionStorage.removeItem('transitionActive');
+    });
+
+    document.querySelectorAll('.transitionLink').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const transitionContainer = document.querySelector('.transitionContainer');
+            transitionContainer.classList.add('active');
+            
+            const linkHref = event.currentTarget.href;
+            
+            sessionStorage.setItem('transitionActive', 'true');
+            
+            setTimeout(function() {
+                window.location.href = linkHref;
+            }, 1000);
+        });
+    });
+</script>
+</body>
+
+</html>

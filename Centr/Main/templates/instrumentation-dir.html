@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приборные смазки</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/directory.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/tt-travels-next-trl" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="{% static "img/logoIcon32.png" %}" rel="shortcut icon" type="image/x-icon">
+    <link href="{% static "img/logoIcon256.png" %}" rel="apple-touch-icon">
+    <script src="{% static "js/bootstrap/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootstrap/popper.min.js" %}"></script>
+    <script src="https://kit.fontawesome.com/10bf1f9c8a.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            document.querySelector('html').classList.add('loaded');
+          };
+    </script>
+</head>
+
+<body>
+    <div class="loaderContainer">
+        <img class="loaderCircle" src="{% static "img/loaderCircle.svg" %}">
+        <img class="loaderLogo" src="{% static "img/loaderLogo.png" %}">
+    </div>
+    <div class="transitionContainer"></div>
+    <nav class="navbar sticky-top">
+        <div class="container-fluid">
+            <div class="navbarContent">
+                <a href="{% url "home" %}" class="navbar-brand navLogo transitionLink"><img src="{% static "img/logo.png" %}"></a>
+                <a href="{% url "catalog" %}" class="nav-link nLink navLinks transitionLink">Каталог</a>
+                <a href="{% url "production" %}" class="nav-link nLink nLinks transitionLink">Производство</a>
+                <a href="{% url "directory" %}" class="nav-link nLink nLinks transitionLink">О смазках</a>
+            </div>
+            <div>
+                <a href="{% url "map" %}" class="nav-link nLink nMap transitionLink">Как проехать</a>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="tipsHeader">
+            <p class="tipsHeaderP">
+                ПРИБОРНЫЕ СМАЗКИ
+            </p>
+        </div>
+        <div class="articlesTop">
+            <p class="articlesText">Приборные смазки — специализированные составы, предназначенные 
+                для обработки узлов трения высокоточного механического и электронного 
+                оборудования. Вещества задействуются в гироскопических, радиоэлектронных, 
+                электромеханических, навигационных, оптических устройствах и автоматизированных 
+                системах управления. Применяются для обработки часовых и телефонных 
+                элементов, подшипников авиационных электромашин, точных механизмов 
+                электрооборудования и координатно-расточных станков. Используются в 
+                автомобилестроении и других производственных отраслях</p>
+        </div>
+        <div class="articlesProduct">
+            <p class="articlesProductHeader">У нас Вы можете купить приборные смазки</p>
+            <div class="articleProdBodyContainer">
+                <div class="prodCardBody">
+                    <a href="/catalog/instrumentation/51" class="cardProd transitionLink">
+                        <div class="cardProdImg">
+                            <img src="{% static "img/jb.webp" %}" width="80%">
+                        </div>
+                        <div class="catalogCategoryInfo">
+                            <p class="catalogCategoryName" style="color: white">ПРОДУКТ<br>
+                            КАТЕГОРИЯ<br>
+                            ГОСТ</p>
+                            <p class="catalogCategoryText" style="color: white">ОКБ-122-7<br>
+                            Приборная<br>
+                            ГОСТ 18179-72</p>
+                        </div>
+                    </a>
+                    <a href="/catalog/instrumentation/52" class="cardProd transitionLink">
+                        <div class="cardProdImg">
+                            <img src="{% static "img/jb.webp" %}" width="80%">
+                        </div>
+                        <div class="catalogCategoryInfo">
+                            <p class="catalogCategoryName" style="color: white">ПРОДУКТ<br>
+                            КАТЕГОРИЯ<br>
+                            ГОСТ</p>
+                            <p class="catalogCategoryText" style="color: white">Циатим-201<br>
+                            Приборная<br>
+                            ГОСТ 6267-2021</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="prodFooter">
+                <a href="{% url "catalog" %}" class="nLink transitionLink">
+                    Ознакомиться с каталогом
+                </a>
+            </div>
+        </div>
+        <div class="articlesCenter">
+            <strong class="articlesText">Разновидности и преимущества</strong>
+            <b>В зависимости от состава приборные смазки подразделяются на 3 группы:</b>
+            <ul class="articlesText">
+                <li class="articlesList">- Минеральные — производятся из нефтяных масел с добавлением 
+                    фрикционных присадок направленного действия</li>
+                <li class="articlesList">- Синтетические — изготавливаются из нефтяных масел и продуктов химического синтеза</li>
+                <li>- Смешанные — выпускаются на основе смесей нефтяных масел, продуктов химического синтеза 
+                    и функциональных присадок направленного действия</li>
+            </ul>
+            <p class="articlesText">При использовании материалов стабилизируется работа деталей оборудования, 
+                замедляется износ и увеличивается срок службы механизмов, возрастают интервалы между 
+                плановыми обслуживаниями техники. Гарантируется отсутствие жировых налетов и других 
+                нежелательных пятен на поверхности оптических элементов</p>
+            <p class="articlesText">Смазки отличаются высокой влагостойкостью и химической стабильностью, хорошими 
+                противоизносными и консервационными показателями, а также длительным периодом 
+                эксплуатации без потери свойств. Вещества также обладают механической 
+                прочностью к истиранию, устойчивостью к вымыванию и окислению. Способны 
+                эффективно работать в условиях низких и высоких температур</p>
+            <strong class="articlesText">Как выбрать?</p>
+            <p>Покупать продукт необходимо с учетом класса консистенции, вязкости базового масла 
+                и наличия специальных присадок. Также нужно брать во внимание срок работы материала 
+                в заданном температурном режиме, допустимую календарную продолжительность 
+                эксплуатации, показатель поверхностного натяжения и другие характеристики</p>
+            <p class="articlesBottom">Мы отгружаем смазочные материалы во все регионы России и страны Таможенного союза. 
+                Также возможен самовывоз со склада готовой продукции. Стоимость зависит 
+                от объема партии, срочности изготовления, марки и состава смазки</p>
+        </div>
+        <div class="contactContainer">
+            <div class="col-lg-5 col-sm-12 contactContent">
+                <h2 class="contactHeader">
+                    Контакты
+                </h2>
+                <div class="contactBody">
+                    <div class="contactBodyText">
+                        <h3 class="contactBodyH">
+                            Менеджер отдела продаж
+                        </h3>
+                        <p class="contactBodyP">
+                            Егор Сташков<br>
+                            evc1@mail.ru
+                        </p>
+                    </div>
+                    <div class="contactBodyText">
+                        <h3 class="contactBodyH">
+                            Адрес
+                        </h3>
+                        <p class="contactBodyP">
+                            Свердловская область<br>
+                            г. Полевской, с. Курганово, стр. 2 Лит. 6<br>
+                            623376
+                        </p>
+                    </div>
+                </div>
+                <div class="contactBodyLinks">
+                    <a class="nLink contactBodyLink transitionLink" href="{% url "map" %}">
+                        Ознакомиться с картой
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12 contactContent">
+                <h2 class="feedbackHeader">
+                    Обратная связь
+                </h2>
+                {% include 'contact.html' with form=form %}
+            </div>
+        </div>
+        <div class="articleFooter" style="width: 95%; margin-left: 2.5%; display: flex; flex-direction: row; justify-content: space-between;">
+            <a href="{% url "lowtemp" %}" class="nLink articleFooterPrev transitionLink"><i class="fa-solid fa-angle-left"></i> Низкотемпературные смазки</a>
+            <a href="{% url "directory" %}" class="nLink articleFooterMain transitionLink">О смазках</a>
+            <a href="{% url "gearbox" %}" class="nLink articleFooterNext transitionLink">Редукторные смазки <i class="fa-solid fa-angle-right"></i></a>
+        </div>
+        <div class="footerContainer">
+            <div class="footerBody">
+                <div class="footerBodyCompany">
+                    <p class="footerBodyCompanyCopy">© 2024 ООО “Центр-Ойл”<br>
+                        Продажа пластичных смазок<br>
+                        Все права защищены
+                    </p>
+                    <p class="footerBodyCompanyTime">
+                        Время работы:<br>
+                        пн-пт с 9:00 до 17:00
+                    </p>
+                    <p class="footerBodyCompanyMail">
+                        evc1@mail.ru<br>
+                    </p>
+                </div>
+                <div class="footerBodyNav">
+                    <a href="{% url "catalog" %}" class="footerBodyNavMainLink transitionLink">Каталог</a>
+                    <a href="{% url "production" %}" class="footerBodyNavLink transitionLink">Производство</a>
+                    <a href="{% url "directory" %}" class="footerBodyNavLink transitionLink">О смазках</a>
+                    <a href="{% url "map" %}" class="footerBodyNavMainLink2 transitionLink">Как проехать</a>
+                </div>
+                <div class="footerBodyDocs">
+                    <a href="{% url "privacy" %}" class="footerBodyDoscMain transitionLink">Политика конфиденциальности</a>
+                    <a href="{% static "docs/pricelist.xls" %}" class="footerBodyDocsPrimary">Перечень пластичных смазок</a>
+                </div>
+                <div>
+                    <a href="https://v0lmer.xyz" class="footerBodyMade transitionLink">Made by: V0lmer</a>
+                </div>
+            </div>
+            <div class="footerBodyNotice">
+                <p class="footerBodyNoticeText">
+                    Обращаем Ваше внимание на то, что данный интернет-сайт 
+                    носит исключительно информационный характер и ни при 
+                    каких условиях информационные материалы и цены, размещенные 
+                    на сайте, не являются публичной офертой, определяемой 
+                    положениями Статьи 437 Гражданского кодекса РФ
+                </p>
+            </div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
+<script>
+    window.addEventListener('pageshow', function() {
+        const transitionContainer = document.querySelector('.transitionContainer');
+        transitionContainer.classList.remove('active');
+        sessionStorage.removeItem('transitionActive');
+    });
+
+    document.querySelectorAll('.transitionLink').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const transitionContainer = document.querySelector('.transitionContainer');
+            transitionContainer.classList.add('active');
+            
+            const linkHref = event.currentTarget.href;
+            
+            sessionStorage.setItem('transitionActive', 'true');
+            
+            setTimeout(function() {
+                window.location.href = linkHref;
+            }, 1000);
+        });
+    });
+</script>
+</body>
+
+</html>

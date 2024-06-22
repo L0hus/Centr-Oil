@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр-Ойл | О Смазках</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/directory.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/tt-travels-next-trl" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="{% static "img/logoIcon32.png" %}" rel="shortcut icon" type="image/x-icon">
+    <link href="{% static "img/logoIcon256.png" %}" rel="apple-touch-icon">
+    <script src="{% static "js/bootstrap/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootstrap/popper.min.js" %}"></script>
+    <script src="https://kit.fontawesome.com/10bf1f9c8a.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            document.querySelector('html').classList.add('loaded');
+          };
+    </script>
+</head>
+
+<body>
+    <div class="loaderContainer">
+        <img class="loaderCircle" src="{% static "img/loaderCircle.svg" %}">
+        <img class="loaderLogo" src="{% static "img/loaderLogo.png" %}">
+    </div>
+    <div class="transitionContainer"></div>
+    <nav class="navbar sticky-top">
+        <div class="container-fluid">
+            <div class="navbarContent">
+                <a href="{% url "home" %}" class="navbar-brand navLogo transitionLink"><img src="{% static "img/logo.png" %}"></a>
+                <a href="{% url "catalog" %}" class="nav-link nLink navLinks transitionLink">Каталог</a>
+                <a href="{% url "production" %}" class="nav-link nLink nLinks transitionLink">Производство</a>
+                <a href="{% url "directory" %}" class="nav-link nLink nLinks transitionLink">О смазках</a>
+            </div>
+            <div>
+                <a href="{% url "map" %}" class="nav-link nLink nMap transitionLink">Как проехать</a>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="catalogSlogan">
+            <p class="catalogSloganH">
+                О СМАЗКАХ
+            </p>
+        </div>
+        <div>
+            <div style="width: 95%; margin-left: 2.5%;">
+                <div class="dirBody">
+                    <a href="{% url "auto" %}" class="statesLink transitionLink">
+                        <p class="statesLinkText">Автомобильные смазки</p>
+                    </a>
+                    <a href="{% url "aviation" %}" class="statesLink transitionLink">
+                        <p class="statesLinkText">Авиационные смазки</p>
+                    </a>
+                    <a href="{% url "cable" %}" class="statesLink transitionLink">
+                        <p class="statesLinkText">Канатные смазки</p>
+                    </a>
+                    <a href="{% url "conservation" %}" class="statesLink transitionLink">
+                        <p class="statesLinkText">Консервационные смазки</p>
+                    </a>
+                </div>
+                <div class="dirBody">
+                    <a href="{% url "multi" %}" class="statesLink transitionLink">
+                        <p class="statesLinkText">Многоцелевые смазки</p>
+                    </a>
+                    <a href="{% url "lowtemp" %}" class="statesLink transitionLink">
+                        <p class="statesLinkText">Низкотемпературные смазки</p>
+                    </a>
+                    <a href="{% url "instrumentation" %}" class="statesLink transitionLink">
+                        <p class="statesLinkText">Приборные смазки</p>
+                    </a>
+                    <a href="{% url "gearbox" %}" class="statesLink transitionLink">
+                        <p class="statesLinkText">Редукторные смазки</p>
+                    </a>
+                </div>
+                <div class="dirBody1">
+                    <a href="{% url "reinforcing" %}" class="statesLink statesLink1 transitionLink">
+                        <p class="statesLinkText">Смазки уплотнительные арматурные</p>
+                    </a>
+                    <a href="{% url "conductive" %}" class="statesLink statesLink1 transitionLink">
+                        <p class="statesLinkText">Токопроводящие смазки</p>
+                    </a>
+                    <a href="{% url "lithium" %}" class="statesLink statesLink1 transitionLink">
+                        <p class="statesLinkText">Литиевые смазки</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="tipsHeader">
+            <p class="tipsHeaderP">
+                АССОРТИМЕНТ ОТЕЧЕСТВЕННЫХ СМАЗОК ВЕЛИК
+            </p>
+        </div>
+        <div style="width: 95%; margin-left: 2.5%;">
+            <p class="tipsBody">Разрабатываются новые смазки, совершенствуются старые 
+                и бывает не легко разобраться во всем многообразии мира 
+                смазочных материалов. Мы готовы помочь вам в этом не легком деле</p>
+        </div>
+        <div class="contactContainer">
+            <div class="col-lg-5 col-sm-12 contactContent">
+                <h2 class="contactHeader">
+                    Контакты
+                </h2>
+                <div class="contactBody">
+                    <div class="contactBodyText">
+                        <h3 class="contactBodyH">
+                            Менеджер отдела продаж
+                        </h3>
+                        <p class="contactBodyP">
+                            Егор Сташков<br>
+                            evc1@mail.ru
+                        </p>
+                    </div>
+                    <div class="contactBodyText">
+                        <h3 class="contactBodyH">
+                            Адрес
+                        </h3>
+                        <p class="contactBodyP">
+                            Свердловская область<br>
+                            г. Полевской, с. Курганово, стр. 2 Лит. 6<br>
+                            623376
+                        </p>
+                    </div>
+                </div>
+                <div class="contactBodyLinks">
+                    <a class="nLink contactBodyLink transitionLink" href="{% url "map" %}">
+                        Ознакомиться с картой
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12 contactContent">
+                <h2 class="feedbackHeader">
+                    Обратная связь
+                </h2>
+                {% include 'contact.html' with form=form %}
+            </div>
+        </div>
+        <div class="footerContainer">
+            <div class="footerBody">
+                <div class="footerBodyCompany">
+                    <p class="footerBodyCompanyCopy">© 2024 ООО “Центр-Ойл”<br>
+                        Продажа пластичных смазок<br>
+                        Все права защищены
+                    </p>
+                    <p class="footerBodyCompanyTime">
+                        Время работы:<br>
+                        пн-пт с 9:00 до 17:00
+                    </p>
+                    <p class="footerBodyCompanyMail">
+                        evc1@mail.ru<br>
+                    </p>
+                </div>
+                <div class="footerBodyNav">
+                    <a href="{% url "catalog" %}" class="footerBodyNavMainLink transitionLink">Каталог</a>
+                    <a href="{% url "production" %}" class="footerBodyNavLink transitionLink">Производство</a>
+                    <a href="{% url "directory" %}" class="footerBodyNavLink transitionLink">О смазках</a>
+                    <a href="{% url "map" %}" class="footerBodyNavMainLink2 transitionLink">Как проехать</a>
+                </div>
+                <div class="footerBodyDocs">
+                    <a href="{% url "privacy" %}" class="footerBodyDoscMain transitionLink">Политика конфиденциальности</a>
+                    <a href="{% static "docs/pricelist.xls" %}" class="footerBodyDocsPrimary">Перечень пластичных смазок</a>
+                </div>
+                <div>
+                    <a href="https://v0lmer.xyz" class="footerBodyMade transitionLink">Made by: V0lmer</a>
+                </div>
+            </div>
+            <div class="footerBodyNotice">
+                <p class="footerBodyNoticeText">
+                    Обращаем Ваше внимание на то, что данный интернет-сайт 
+                    носит исключительно информационный характер и ни при 
+                    каких условиях информационные материалы и цены, размещенные 
+                    на сайте, не являются публичной офертой, определяемой 
+                    положениями Статьи 437 Гражданского кодекса РФ
+                </p>
+            </div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
+<script>
+    window.addEventListener('pageshow', function() {
+        const transitionContainer = document.querySelector('.transitionContainer');
+        transitionContainer.classList.remove('active');
+        sessionStorage.removeItem('transitionActive');
+    });
+
+    document.querySelectorAll('.transitionLink').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const transitionContainer = document.querySelector('.transitionContainer');
+            transitionContainer.classList.add('active');
+            
+            const linkHref = event.currentTarget.href;
+            
+            sessionStorage.setItem('transitionActive', 'true');
+            
+            setTimeout(function() {
+                window.location.href = linkHref;
+            }, 1000);
+        });
+    });
+</script>
+</body>
+
+</html>
